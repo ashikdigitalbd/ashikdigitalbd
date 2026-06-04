@@ -2042,22 +2042,22 @@ body {
             <div class="payment-methods">
                 <div class="payment-method" onclick="selectPayment('bkash', this)">
                     <i class="fas fa-check-circle payment-check"></i>
-                    <img src="https://i.postimg.cc/76XmLZQk/bkash.png" alt="bKash" onerror="this.style.display='none'">
+                    <img src="https://upload.wikimedia.org/wikipedia/bn/a/a8/%E0%A6%AC%E0%A6%BF%E0%A6%95%E0%A6%BE%E0%A6%B6%E0%A7%87%E0%A6%B0_%E0%A6%B2%E0%A7%8B%E0%A6%97%E0%A7%8B.svg" alt="bKash" onerror="this.style.display='none'">
                     <span>bKash</span>
                 </div>
                 <div class="payment-method" onclick="selectPayment('nagad', this)">
                     <i class="fas fa-check-circle payment-check"></i>
-                    <img src="https://i.postimg.cc/PJBfQpfL/nagad.png" alt="Nagad" onerror="this.style.display='none'">
+                    <img src="https://upload.wikimedia.org/wikipedia/bn/9/97/%E0%A6%A8%E0%A6%97%E0%A6%A6%E0%A7%87%E0%A6%B0_%E0%A6%B2%E0%A7%8B%E0%A6%97%E0%A7%8B.svg" alt="Nagad" onerror="this.style.display='none'">
                     <span>Nagad</span>
                 </div>
                 <div class="payment-method" onclick="selectPayment('rocket', this)">
                     <i class="fas fa-check-circle payment-check"></i>
-                    <img src="https://i.postimg.cc/RVxK3wKn/rocket.png" alt="Rocket" onerror="this.style.display='none'">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/4/45/Rocket_mobile_banking_logo.svg" alt="Rocket" onerror="this.style.display='none'">
                     <span>Rocket</span>
                 </div>
                 <div class="payment-method" onclick="selectPayment('upay', this)">
                     <i class="fas fa-check-circle payment-check"></i>
-                    <img src="https://i.postimg.cc/Y9MNvBJB/upay.png" alt="Upay" onerror="this.style.display='none'">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/d/d5/Upay_logo.svg" alt="Upay" onerror="this.style.display='none'">
                     <span>Upay</span>
                 </div>
             </div>
@@ -2640,8 +2640,8 @@ function initData() {
             shopName: 'ASHIK DIGITAL MARKETING',
             logo: 'https://i.postimg.cc/t4pvMgyF/IMG-20260603-WA0037.jpg',
             paymentNumber: '01933489724',
-            whatsapp: '8801933489724',
-            telegram: 'https://t.me/',
+            whatsapp: '+8801933489724',
+            telegram: 'https://t.me/ASHIKHELPDESK',
             marquee: '🎉 ASHIK DIGITAL MARKETING এ স্বাগতম! সেরা দামে ডিজিটাল প্রোডাক্ট। 📞 01933489724',
             codEnabled: false
         });
@@ -3230,7 +3230,7 @@ function renderOrders() {
 }
 
 function getStatusText(s) {
-    var map = { pending: 'পেন্ডিং', confirmed: 'কনফার্মড', delivered: 'ডেলিভারড', cancelled: 'বাতিল' };
+    var map = { pending: 'পেন্ডিং', confirmed: 'সাকসেস', চেকিং: 'waiting', cancelled: 'বাতিল' };
     return map[s] || s;
 }
 
