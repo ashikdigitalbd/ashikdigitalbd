@@ -6,7 +6,7 @@
 <title>ASHIK DIGITAL MARKETING</title>
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 <style>
-/* আপনার পুরানো CSS এখানে রাখুন - সংক্ষেপের জন্য দিচ্ছি না, আপনার ফাইল থেকে কপি করুন */
+/* আপনার আগের সমস্ত CSS এখানে রাখুন */
 *{margin:0;padding:0;box-sizing:border-box}
 :root{
 --primary:#6366f1;
@@ -454,7 +454,6 @@ input:focus,select:focus,textarea:focus{border-color:var(--primary)}
 </div>
 
 <div class="admin-panel" id="adminPanel">
-
 <div class="admin-sidebar" id="adminSidebar">
 <div class="admin-sidebar-header">
 <img id="sidebarLogo" src="">
@@ -462,48 +461,22 @@ input:focus,select:focus,textarea:focus{border-color:var(--primary)}
 <p>Admin Panel</p>
 </div>
 <div class="admin-nav">
-<div class="admin-nav-item active" data-sec="dashboard" onclick="showAdminSection('dashboard')">
-<i class="fas fa-tachometer-alt"></i> ড্যাশবোর্ড
-</div>
-<div class="admin-nav-item" data-sec="products" onclick="showAdminSection('products')">
-<i class="fas fa-box"></i> প্রোডাক্ট
-</div>
-<div class="admin-nav-item" data-sec="categories" onclick="showAdminSection('categories')">
-<i class="fas fa-th-large"></i> ক্যাটাগরি
-</div>
-<div class="admin-nav-item" data-sec="orders" onclick="showAdminSection('orders')">
-<i class="fas fa-shopping-bag"></i> অর্ডার
-</div>
+<div class="admin-nav-item active" data-sec="dashboard" onclick="showAdminSection('dashboard')"><i class="fas fa-tachometer-alt"></i> ড্যাশবোর্ড</div>
+<div class="admin-nav-item" data-sec="products" onclick="showAdminSection('products')"><i class="fas fa-box"></i> প্রোডাক্ট</div>
+<div class="admin-nav-item" data-sec="categories" onclick="showAdminSection('categories')"><i class="fas fa-th-large"></i> ক্যাটাগরি</div>
+<div class="admin-nav-item" data-sec="orders" onclick="showAdminSection('orders')"><i class="fas fa-shopping-bag"></i> অর্ডার</div>
 <div class="admin-nav-divider"></div>
-<div class="admin-nav-item" data-sec="banners" onclick="showAdminSection('banners')">
-<i class="fas fa-images"></i> ব্যানার
-</div>
-<div class="admin-nav-item" data-sec="payment" onclick="showAdminSection('payment')">
-<i class="fas fa-credit-card"></i> পেমেন্ট সেটিংস
-</div>
-<div class="admin-nav-item" data-sec="settings" onclick="showAdminSection('settings')">
-<i class="fas fa-cog"></i> সাইট সেটিংস
-</div>
-<div class="admin-nav-item" data-sec="telegram" onclick="showAdminSection('telegram')">
-<i class="fab fa-telegram"></i> টেলিগ্রাম বট
-</div>
-<div class="admin-nav-item" data-sec="whatsapp" onclick="showAdminSection('whatsapp')">
-<i class="fab fa-whatsapp"></i> WhatsApp
-</div>
+<div class="admin-nav-item" data-sec="banners" onclick="showAdminSection('banners')"><i class="fas fa-images"></i> ব্যানার</div>
+<div class="admin-nav-item" data-sec="payment" onclick="showAdminSection('payment')"><i class="fas fa-credit-card"></i> পেমেন্ট সেটিংস</div>
+<div class="admin-nav-item" data-sec="settings" onclick="showAdminSection('settings')"><i class="fas fa-cog"></i> সাইট সেটিংস</div>
+<div class="admin-nav-item" data-sec="telegram" onclick="showAdminSection('telegram')"><i class="fab fa-telegram"></i> টেলিগ্রাম বট</div>
+<div class="admin-nav-item" data-sec="whatsapp" onclick="showAdminSection('whatsapp')"><i class="fab fa-whatsapp"></i> WhatsApp</div>
 <div class="admin-nav-divider"></div>
-<div class="admin-nav-item" data-sec="subadmins" onclick="showAdminSection('subadmins')">
-<i class="fas fa-users"></i> সাব-অ্যাডমিন
-</div>
-<div class="admin-nav-item" data-sec="security" onclick="showAdminSection('security')">
-<i class="fas fa-shield-alt"></i> সিকিউরিটি
-</div>
-<div class="admin-nav-item" data-sec="reviews" onclick="showAdminSection('reviews')">
-<i class="fas fa-star"></i> রিভিউ
-</div>
+<div class="admin-nav-item" data-sec="subadmins" onclick="showAdminSection('subadmins')"><i class="fas fa-users"></i> সাব-অ্যাডমিন</div>
+<div class="admin-nav-item" data-sec="security" onclick="showAdminSection('security')"><i class="fas fa-shield-alt"></i> সিকিউরিটি</div>
+<div class="admin-nav-item" data-sec="reviews" onclick="showAdminSection('reviews')"><i class="fas fa-star"></i> রিভিউ</div>
 <div class="admin-nav-divider"></div>
-<div class="admin-nav-item" onclick="adminLogout()" style="color:#ff5252">
-<i class="fas fa-sign-out-alt"></i> লগআউট
-</div>
+<div class="admin-nav-item" onclick="adminLogout()" style="color:#ff5252"><i class="fas fa-sign-out-alt"></i> লগআউট</div>
 </div>
 </div>
 
@@ -519,304 +492,52 @@ input:focus,select:focus,textarea:focus{border-color:var(--primary)}
 
 <div class="admin-section active" id="sec-dashboard">
 <div class="dashboard-cards">
-<div class="dash-card">
-<div class="dash-card-icon" style="background:linear-gradient(135deg,#667eea,#764ba2)"><i class="fas fa-box"></i></div>
-<div class="dash-card-info"><h3 id="totalProducts">0</h3><p>মোট প্রোডাক্ট</p></div>
+<div class="dash-card"><div class="dash-card-icon" style="background:linear-gradient(135deg,#667eea,#764ba2)"><i class="fas fa-box"></i></div><div class="dash-card-info"><h3 id="totalProducts">0</h3><p>মোট প্রোডাক্ট</p></div></div>
+<div class="dash-card"><div class="dash-card-icon" style="background:linear-gradient(135deg,#f093fb,#f5576c)"><i class="fas fa-shopping-bag"></i></div><div class="dash-card-info"><h3 id="totalOrders">0</h3><p>মোট অর্ডার</p></div></div>
+<div class="dash-card"><div class="dash-card-icon" style="background:linear-gradient(135deg,#4facfe,#00f2fe)"><i class="fas fa-check-circle"></i></div><div class="dash-card-info"><h3 id="confirmedOrders">0</h3><p>কনফার্ম</p></div></div>
+<div class="dash-card"><div class="dash-card-icon" style="background:linear-gradient(135deg,#43e97b,#38f9d7)"><i class="fas fa-money-bill"></i></div><div class="dash-card-info"><h3 id="totalRevenue">৳0</h3><p>মোট আয়</p></div></div>
 </div>
-<div class="dash-card">
-<div class="dash-card-icon" style="background:linear-gradient(135deg,#f093fb,#f5576c)"><i class="fas fa-shopping-bag"></i></div>
-<div class="dash-card-info"><h3 id="totalOrders">0</h3><p>মোট অর্ডার</p></div>
-</div>
-<div class="dash-card">
-<div class="dash-card-icon" style="background:linear-gradient(135deg,#4facfe,#00f2fe)"><i class="fas fa-check-circle"></i></div>
-<div class="dash-card-info"><h3 id="confirmedOrders">0</h3><p>কনফার্ম</p></div>
-</div>
-<div class="dash-card">
-<div class="dash-card-icon" style="background:linear-gradient(135deg,#43e97b,#38f9d7)"><i class="fas fa-money-bill"></i></div>
-<div class="dash-card-info"><h3 id="totalRevenue">৳0</h3><p>মোট আয়</p></div>
-</div>
-</div>
-<div class="admin-card">
-<h3>📋 সাম্প্রতিক অর্ডার</h3>
-<div class="admin-table-wrap">
-<table class="admin-table">
-<thead><tr><th>ID</th><th>কাস্টমার</th><th>পরিমাণ</th><th>স্ট্যাটাস</th></tr></thead>
-<tbody id="recentOrdersTable"></tbody>
-</table>
-</div>
-</div>
+<div class="admin-card"><h3>📋 সাম্প্রতিক অর্ডার</h3><div class="admin-table-wrap"><table class="admin-table"><thead><tr><th>ID</th><th>কাস্টমার</th><th>পরিমাণ</th><th>স্ট্যাটাস</th></tr></thead><tbody id="recentOrdersTable"></tbody></table></div></div>
 </div>
 
-<div class="admin-section" id="sec-products">
-<div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:15px;flex-wrap:wrap;gap:10px">
-<h3>📦 প্রোডাক্ট ম্যানেজমেন্ট</h3>
-<button class="btn btn-primary btn-sm" onclick="openProductForm()"><i class="fas fa-plus"></i> নতুন প্রোডাক্ট</button>
-</div>
-<div id="adminProductList"></div>
-<div class="admin-card" id="productFormCard" style="display:none">
-<h3 id="productFormTitle">নতুন প্রোডাক্ট</h3>
-<div class="admin-form-row">
-<div class="form-group"><label>নাম</label><input type="text" id="pName"></div>
-<div class="form-group"><label>ক্যাটাগরি</label><select id="pCategory"></select></div>
-</div>
-<div class="admin-form-row">
-<div class="form-group"><label>মূল্য (৳)</label><input type="number" id="pPrice"></div>
-<div class="form-group"><label>পুরাতন মূল্য (৳)</label><input type="number" id="pOldPrice"></div>
-</div>
+<div class="admin-section" id="sec-products"><div style="display:flex;justify-content:space-between;margin-bottom:15px"><h3>📦 প্রোডাক্ট ম্যানেজমেন্ট</h3><button class="btn btn-primary btn-sm" onclick="openProductForm()"><i class="fas fa-plus"></i> নতুন</button></div><div id="adminProductList"></div>
+<div class="admin-card" id="productFormCard" style="display:none"><h3 id="productFormTitle">নতুন প্রোডাক্ট</h3><div class="admin-form-row"><div class="form-group"><label>নাম</label><input type="text" id="pName"></div><div class="form-group"><label>ক্যাটাগরি</label><select id="pCategory"></select></div></div>
+<div class="admin-form-row"><div class="form-group"><label>মূল্য</label><input type="number" id="pPrice"></div><div class="form-group"><label>পুরাতন মূল্য</label><input type="number" id="pOldPrice"></div></div>
 <div class="form-group"><label>বিবরণ</label><textarea id="pDesc" rows="3"></textarea></div>
-<div class="form-group">
-<label>ছবি URL</label>
-<input type="text" id="pImage" oninput="previewImg('pImage','pImgPreview')">
-<div class="img-preview" id="pImgPreview" style="height:120px"><span>📷 প্রিভিউ</span></div>
-</div>
-<div class="admin-form-row">
-<div class="form-group">
-<label>ব্যাজ</label>
-<select id="pBadge"><option value="">কিছু নেই</option><option value="new">New</option><option value="sale">Sale</option><option value="hot">Hot</option></select>
-</div>
-<div class="form-group"><label>স্টক</label><input type="number" id="pStock" value="100"></div>
-</div>
-<div style="display:flex;gap:10px;flex-wrap:wrap">
-<button class="btn btn-primary" onclick="saveProduct()"><i class="fas fa-save"></i> সেভ</button>
-<button class="btn btn-outline" onclick="closeProductForm()">বাতিল</button>
-</div>
+<div class="form-group"><label>ছবি URL</label><input type="text" id="pImage" oninput="previewImg('pImage','pImgPreview')"><div class="img-preview" id="pImgPreview"><span>📷 প্রিভিউ</span></div></div>
+<div class="admin-form-row"><div class="form-group"><label>ব্যাজ</label><select id="pBadge"><option value="">কিছু নেই</option><option value="new">New</option><option value="sale">Sale</option><option value="hot">Hot</option></select></div><div class="form-group"><label>স্টক</label><input type="number" id="pStock" value="100"></div></div>
+<button class="btn btn-primary" onclick="saveProduct()">সেভ</button><button class="btn btn-outline" onclick="closeProductForm()">বাতিল</button></div></div>
+
+<div class="admin-section" id="sec-categories"><div style="display:flex;justify-content:space-between;margin-bottom:15px"><h3>📂 ক্যাটাগরি</h3><button class="btn btn-primary btn-sm" onclick="openCategoryForm()"><i class="fas fa-plus"></i> নতুন</button></div><div id="adminCategoryList"></div>
+<div class="admin-card" id="categoryFormCard" style="display:none"><h3>নতুন ক্যাটাগরি</h3><div class="admin-form-row"><div class="form-group"><label>নাম</label><input type="text" id="catName"></div><div class="form-group"><label>আইকন</label><input type="text" id="catIcon" placeholder="🤖"></div></div><button class="btn btn-primary" onclick="saveCategory()">সেভ</button></div></div>
+
+<div class="admin-section" id="sec-orders"><h3>📋 অর্ডার ম্যানেজমেন্ট</h3><div style="display:flex;gap:8px;margin:15px 0"><button class="btn btn-sm btn-primary" onclick="filterOrders('all')">সব</button><button class="btn btn-sm btn-warning" onclick="filterOrders('pending')">পেন্ডিং</button><button class="btn btn-sm btn-success" onclick="filterOrders('confirmed')">কনফার্ম</button></div>
+<div class="admin-card"><div class="admin-table-wrap"><table class="admin-table"><thead><tr><th>ID</th><th>কাস্টমার</th><th>ফোন</th><th>মোট</th><th>পেমেন্ট</th><th>স্ট্যাটাস</th><th>অ্যাকশন</th></tr></thead><tbody id="ordersTableBody"></tbody></table></div></div></div>
+
+<div class="admin-section" id="sec-banners"><div style="display:flex;justify-content:space-between;margin-bottom:15px"><h3>🖼️ ব্যানার</h3><button class="btn btn-primary btn-sm" onclick="openBannerForm()"><i class="fas fa-plus"></i> নতুন</button></div><div id="adminBannerList"></div>
+<div class="admin-card" id="bannerFormCard" style="display:none"><h3>নতুন ব্যানার</h3><div class="form-group"><label>শিরোনাম</label><input type="text" id="bannerTitle"></div><div class="form-group"><label>সাবটাইটেল</label><input type="text" id="bannerSubtitle"></div><div class="form-group"><label>ছবি URL</label><input type="text" id="bannerImage"></div><div class="form-group"><label>লিংক</label><input type="text" id="bannerLink"></div><button class="btn btn-primary" onclick="saveBanner()">সেভ</button></div></div>
+
+<div class="admin-section" id="sec-payment"><h3>💳 পেমেন্ট সেটিংস</h3><div class="admin-card"><div id="paymentMethodsList"></div></div><div class="admin-card"><h3>ক্যাশ অন ডেলিভারি</h3><label class="switch"><input type="checkbox" id="codToggle" onchange="toggleCOD()"><span class="slider"></span></label></div></div>
+
+<div class="admin-section" id="sec-settings"><h3>⚙️ সাইট সেটিংস</h3><div class="admin-card"><div class="form-group"><label>সাইটের নাম</label><input type="text" id="setSiteName"></div><div class="form-group"><label>লোগো URL</label><input type="text" id="setLogo" oninput="document.getElementById('logoPreview').src=this.value"><div class="img-preview"><img id="logoPreview" src=""></div></div><div class="form-group"><label>যোগাযোগ নম্বর</label><input type="text" id="setContact"></div><div class="form-group"><label>ইমেইল</label><input type="email" id="setEmail"></div><div class="form-group"><label>ফেসবুক</label><input type="text" id="setFacebook"></div><div class="form-group"><label>YouTube</label><input type="text" id="setYoutube"></div><button class="btn btn-primary" onclick="saveSiteSettings()">সেভ</button></div></div>
+
+<div class="admin-section" id="sec-telegram"><h3>🤖 টেলিগ্রাম বট</h3><div class="admin-card"><div class="form-group"><label>Bot Token</label><input type="text" id="tgBotToken"></div><div class="form-group"><label>Chat ID</label><input type="text" id="tgChatId"></div><div class="form-group"><label>Username</label><input type="text" id="tgUsername"></div><button class="btn btn-primary" onclick="saveTelegramSettings()">সেভ</button><button class="btn btn-outline" onclick="testTelegram()">টেস্ট</button></div></div>
+
+<div class="admin-section" id="sec-whatsapp"><h3>💬 WhatsApp</h3><div class="admin-card"><div class="form-group"><label>নম্বর (88 সহ)</label><input type="text" id="waNumber"></div><div class="form-group"><label>মেসেজ</label><input type="text" id="waMessage"></div><button class="btn btn-primary" onclick="saveWhatsAppSettings()">সেভ</button></div></div>
+
+<div class="admin-section" id="sec-subadmins"><div style="display:flex;justify-content:space-between;margin-bottom:15px"><h3>👥 সাব-অ্যাডমিন</h3><button class="btn btn-primary btn-sm" onclick="openSubAdminForm()">ইনভাইট</button></div><div id="subAdminList"></div>
+<div class="admin-card" id="subAdminFormCard" style="display:none"><h3>নতুন সাব-অ্যাডমিন</h3><div class="form-group"><label>নাম</label><input type="text" id="saName"></div><div class="form-group"><label>ইমেইল</label><input type="email" id="saEmail"></div><div class="form-group"><label>পাসওয়ার্ড</label><input type="password" id="saPass"></div><button class="btn btn-primary" onclick="saveSubAdmin()">ইনভাইট</button></div></div>
+
+<div class="admin-section" id="sec-security"><h3>🔐 সিকিউরিটি</h3><div class="admin-card"><h3>পাসওয়ার্ড পরিবর্তন</h3><div class="form-group"><label>বর্তমান</label><input type="password" id="currentPass"></div><div class="form-group"><label>নতুন</label><input type="password" id="newPass"></div><div class="form-group"><label>নিশ্চিত</label><input type="password" id="confirmPass"></div><button class="btn btn-primary" onclick="changePassword()">পরিবর্তন</button></div></div>
+
+<div class="admin-section" id="sec-reviews"><h3>⭐ রিভিউ</h3><div id="adminReviewList"></div></div>
 </div>
 </div>
 
-<div class="admin-section" id="sec-categories">
-<div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:15px;flex-wrap:wrap;gap:10px">
-<h3>📂 ক্যাটাগরি</h3>
-<button class="btn btn-primary btn-sm" onclick="openCategoryForm()"><i class="fas fa-plus"></i> নতুন</button>
-</div>
-<div id="adminCategoryList"></div>
-<div class="admin-card" id="categoryFormCard" style="display:none">
-<h3>নতুন ক্যাটাগরি</h3>
-<div class="admin-form-row">
-<div class="form-group"><label>নাম</label><input type="text" id="catName"></div>
-<div class="form-group"><label>আইকন</label><input type="text" id="catIcon" placeholder="🤖" maxlength="2"></div>
-</div>
-<button class="btn btn-primary" onclick="saveCategory()"><i class="fas fa-save"></i> সেভ</button>
-</div>
-</div>
-
-<div class="admin-section" id="sec-orders">
-<h3>📋 অর্ডার ম্যানেজমেন্ট</h3>
-<div style="display:flex;gap:8px;margin:15px 0;flex-wrap:wrap">
-<button class="btn btn-sm btn-primary" onclick="filterOrders('all')">সব</button>
-<button class="btn btn-sm btn-warning" onclick="filterOrders('pending')">⏳ পেন্ডিং</button>
-<button class="btn btn-sm" style="background:#7b1fa2;color:#fff" onclick="filterOrders('processing')">🔄 প্রসেসিং</button>
-<button class="btn btn-sm btn-success" onclick="filterOrders('confirmed')">✅ কনফার্ম</button>
-<button class="btn btn-sm btn-danger" onclick="filterOrders('cancelled')">❌ বাতিল</button>
-</div>
-<div class="admin-card">
-<div class="admin-table-wrap">
-<table class="admin-table">
-<thead><tr><th>ID</th><th>কাস্টমার</th><th>ফোন</th><th>মোট</th><th>পেমেন্ট</th><th>স্ট্যাটাস</th><th>অ্যাকশন</th></tr></thead>
-<tbody id="ordersTableBody"></tbody>
-</table>
-</div>
-</div>
-</div>
-
-<div class="admin-section" id="sec-banners">
-<div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:15px;flex-wrap:wrap;gap:10px">
-<h3>🖼️ ব্যানার</h3>
-<button class="btn btn-primary btn-sm" onclick="openBannerForm()"><i class="fas fa-plus"></i> নতুন</button>
-</div>
-<div id="adminBannerList"></div>
-<div class="admin-card" id="bannerFormCard" style="display:none">
-<h3>নতুন ব্যানার</h3>
-<div class="form-group"><label>শিরোনাম</label><input type="text" id="bannerTitle"></div>
-<div class="form-group"><label>সাবটাইটেল</label><input type="text" id="bannerSubtitle"></div>
-<div class="form-group"><label>ছবি URL</label><input type="text" id="bannerImage"></div>
-<div class="form-group"><label>লিংক URL</label><input type="text" id="bannerLink"></div>
-<button class="btn btn-primary" onclick="saveBanner()"><i class="fas fa-save"></i> সেভ</button>
-</div>
-</div>
-
-<div class="admin-section" id="sec-payment">
-<h3>💳 পেমেন্ট সেটিংস</h3>
-<div class="admin-card">
-<h3>ডিজিটাল পেমেন্ট মেথড</h3>
-<p style="color:var(--text-light);font-size:13px;margin-bottom:15px">💡 প্রতিটি পেমেন্ট মেথডের নম্বর এবং লোগো পরিবর্তন করতে পারেন</p>
-<div id="paymentMethodsList"></div>
-</div>
-<div class="admin-card">
-<h3>ক্যাশ অন ডেলিভারি</h3>
-<div style="display:flex;align-items:center;justify-content:space-between">
-<span>COD চালু/বন্ধ</span>
-<label class="switch"><input type="checkbox" id="codToggle" onchange="toggleCOD()"><span class="slider"></span></label>
-</div>
-</div>
-</div>
-
-<div class="admin-section" id="sec-settings">
-<h3>⚙️ সাইট সেটিংস</h3>
-<div class="admin-card">
-<div class="form-group"><label>সাইটের নাম</label><input type="text" id="setSiteName"></div>
-<div class="form-group">
-<label>লোগো URL</label>
-<input type="text" id="setLogo" oninput="document.getElementById('logoPreview').src=this.value">
-<div class="img-preview"><img id="logoPreview" src=""></div>
-</div>
-<div class="form-group"><label>যোগাযোগ নম্বর</label><input type="text" id="setContact"></div>
-<div class="form-group"><label>ইমেইল</label><input type="email" id="setEmail"></div>
-<div class="form-group"><label>ফেসবুক লিংক</label><input type="text" id="setFacebook"></div>
-<div class="form-group"><label>YouTube লিংক</label><input type="text" id="setYoutube"></div>
-<button class="btn btn-primary" onclick="saveSiteSettings()"><i class="fas fa-save"></i> সেভ</button>
-</div>
-</div>
-
-<div class="admin-section" id="sec-telegram">
-<h3>🤖 টেলিগ্রাম বট</h3>
-<div class="admin-card">
-<div class="form-group"><label>Bot Token</label><input type="text" id="tgBotToken"></div>
-<div class="form-group"><label>Chat ID</label><input type="text" id="tgChatId"></div>
-<div class="form-group"><label>Telegram Link</label><input type="text" id="tgUsername" placeholder="https://t.me/..."></div>
-<div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:15px">
-<span>অর্ডার নোটিফিকেশন</span>
-<label class="switch"><input type="checkbox" id="tgNotify" checked><span class="slider"></span></label>
-</div>
-<div style="display:flex;gap:10px;flex-wrap:wrap">
-<button class="btn btn-primary" onclick="saveTelegramSettings()"><i class="fas fa-save"></i> সেভ</button>
-<button class="btn btn-outline" onclick="testTelegram()"><i class="fab fa-telegram"></i> টেস্ট</button>
-</div>
-</div>
-</div>
-
-<div class="admin-section" id="sec-whatsapp">
-<h3>💬 WhatsApp সেটিংস</h3>
-<div class="admin-card">
-<div class="form-group"><label>WhatsApp নম্বর (88 সহ)</label><input type="text" id="waNumber"></div>
-<div class="form-group"><label>ডিফল্ট মেসেজ</label><input type="text" id="waMessage"></div>
-<button class="btn btn-primary" onclick="saveWhatsAppSettings()"><i class="fas fa-save"></i> সেভ</button>
-</div>
-</div>
-
-<div class="admin-section" id="sec-subadmins">
-<div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:15px;flex-wrap:wrap;gap:10px">
-<h3>👥 সাব-অ্যাডমিন</h3>
-<button class="btn btn-primary btn-sm" onclick="openSubAdminForm()"><i class="fas fa-user-plus"></i> ইনভাইট</button>
-</div>
-<p style="color:var(--text-light);margin-bottom:15px;font-size:13px">সাব-অ্যাডমিন শুধু প্রোডাক্ট এবং ক্যাটাগরি ম্যানেজ করতে পারবে।</p>
-<div id="subAdminList"></div>
-<div class="admin-card" id="subAdminFormCard" style="display:none">
-<h3>নতুন সাব-অ্যাডমিন</h3>
-<div class="form-group"><label>নাম</label><input type="text" id="saName"></div>
-<div class="form-group"><label>ইমেইল</label><input type="email" id="saEmail"></div>
-<div class="form-group"><label>পাসওয়ার্ড</label><input type="password" id="saPass"></div>
-<button class="btn btn-primary" onclick="saveSubAdmin()"><i class="fas fa-save"></i> ইনভাইট</button>
-</div>
-</div>
-
-<div class="admin-section" id="sec-security">
-<h3>🔐 সিকিউরিটি</h3>
-<div class="admin-card">
-<h3>পাসওয়ার্ড পরিবর্তন</h3>
-<div class="form-group"><label>বর্তমান পাসওয়ার্ড</label><input type="password" id="currentPass"></div>
-<div class="form-group"><label>নতুন পাসওয়ার্ড</label><input type="password" id="newPass"></div>
-<div class="form-group"><label>নিশ্চিত করুন</label><input type="password" id="confirmPass"></div>
-<button class="btn btn-primary" onclick="changePassword()"><i class="fas fa-key"></i> পরিবর্তন</button>
-</div>
-<div class="admin-card">
-<h3>ইমেইল পরিবর্তন</h3>
-<div class="form-group"><label>নতুন ইমেইল</label><input type="email" id="newEmail"></div>
-<div class="form-group"><label>রিকভারি ইমেইল</label><input type="email" id="recoveryEmail"></div>
-<button class="btn btn-primary" onclick="changeEmail()"><i class="fas fa-envelope"></i> পরিবর্তন</button>
-</div>
-</div>
-
-<div class="admin-section" id="sec-reviews">
-<h3>⭐ রিভিউ ম্যানেজমেন্ট</h3>
-<div id="adminReviewList"></div>
-</div>
-
-</div>
-</div>
-
-<div class="modal-overlay" id="orderModal">
-<div class="modal-content">
-<button class="modal-close" onclick="closeOrderDetail()">✕</button>
-<div id="orderDetailContent"></div>
-</div>
-</div>
+<div class="modal-overlay" id="orderModal"><div class="modal-content"><button class="modal-close" onclick="closeOrderDetail()">✕</button><div id="orderDetailContent"></div></div></div>
 
 <script>
-// ============================================================
-// JSONBin কনফিগারেশন - আপনার API Key দিন
-// ============================================================
-const JSONBIN_CONFIG = {
-    apiKey: '$2a$10$J9ar0gb.E74WPuCSujpSHu.wzuPP1CwL3HrgedZ9uy4xRNZyKkMzAa', // আপনার API Key
-    binId: null,
-    binName: 'ashik-digital-data'
-};
-
-// ডিফল্ট ডেটা
-const DEFAULT_DATA = {
-siteSettings: {
-name: 'ASHIK DIGITAL MARKETING',
-logo: 'https://i.postimg.cc/R0RBDYjt/file-00000000edf07208a1089ceb51c77687.png',
-contact: '01933489724',
-email: 'freefireemyid01@gmail.com',
-facebook: 'https://facebook.com',
-youtube: 'https://youtube.com'
-},
-admin: {
-email: 'freefireemyid01@gmail.com',
-password: 'demo@#1122',
-recoveryEmail: ''
-},
-subAdmins: [],
-categories: [
-{id:1,name:'AI PRO ACCOUNT',icon:'🤖'},
-{id:2,name:'AI DESIGN',icon:'🎨'},
-{id:3,name:'YOUTUBE SERVICE',icon:'📺'},
-{id:4,name:'FACEBOOK SERVICE',icon:'📘'},
-{id:5,name:'DIGITAL PRODUCT',icon:'💾'}
-],
-products: [
-{id:1,name:'CAPCUT PRO ACCOUNT',category:1,price:299,oldPrice:599,image:'https://i.postimg.cc/vBmNpvKW/file-00000000c4fc720bb61ee2116f785287.png',desc:'CAPCUT PRO অ্যাকাউন্ট - ১ মাসের ভ্যালিডিটি',badge:'hot',stock:50,rating:4.8,reviews:152},
-{id:2,name:'CANVA PRO ACCOUNT',category:1,price:399,oldPrice:799,image:'https://i.postimg.cc/vZ8Y0LSQ/file-00000000b3407207b8e8d88f71c8f6f4-(1).png',desc:'CANVA PRO - ১ বছরের ভ্যালিডিটি',badge:'sale',stock:30,rating:4.9,reviews:285},
-{id:3,name:'ADOBE PRO ACCOUNT',category:1,price:1499,oldPrice:2999,image:'https://images.unsplash.com/photo-1572044162444-ad60f128bdea?w=400',desc:'ADOBE CREATIVE CLOUD',badge:'new',stock:20,rating:4.7,reviews:98},
-{id:4,name:'AI LOGO DESIGN',category:2,price:499,oldPrice:1000,image:'https://images.unsplash.com/photo-1626785774573-4b799315345d?w=400',desc:'প্রফেশনাল লোগো ডিজাইন',badge:'',stock:100,rating:4.6,reviews:67},
-{id:5,name:'AI BANNER DESIGN',category:2,price:299,oldPrice:600,image:'https://images.unsplash.com/photo-1611162617474-5b21e879e113?w=400',desc:'আকর্ষণীয় ব্যানার ডিজাইন',badge:'hot',stock:100,rating:4.7,reviews:89},
-{id:6,name:'YOUTUBE 1K SUBSCRIBERS',category:3,price:1500,oldPrice:2500,image:'https://images.unsplash.com/photo-1611162616475-46b635cb6868?w=400',desc:'১০০০ রিয়েল সাবস্ক্রাইবার',badge:'sale',stock:50,rating:4.5,reviews:124},
-{id:7,name:'YOUTUBE 4000 HOURS',category:3,price:3500,oldPrice:5000,image:'https://images.unsplash.com/photo-1611162618071-b39a2ec055fb?w=400',desc:'৪০০০ ঘন্টা ওয়াচ টাইম',badge:'hot',stock:30,rating:4.8,reviews:76},
-{id:8,name:'FACEBOOK PAGE LIKES',category:4,price:500,oldPrice:1000,image:'https://images.unsplash.com/photo-1611605698335-8b1569810432?w=400',desc:'১০০০+ রিয়েল লাইক',badge:'',stock:100,rating:4.4,reviews:203},
-{id:9,name:'FACEBOOK MONETIZATION',category:4,price:2000,oldPrice:3500,image:'https://images.unsplash.com/photo-1432888622747-4eb9a8efeb07?w=400',desc:'পেজ মোনেটাইজেশন সেটআপ',badge:'new',stock:25,rating:4.7,reviews:54},
-{id:10,name:'PREMIUM SOFTWARE',category:5,price:799,oldPrice:1500,image:'https://images.unsplash.com/photo-1551434678-e076c223a692?w=400',desc:'১০০+ প্রিমিয়াম সফটওয়্যার',badge:'hot',stock:60,rating:4.9,reviews:178}
-],
-banners: [
-{id:1,title:'🔥 মেগা অফার!',subtitle:'৫০% পর্যন্ত ছাড়',image:'https://i.postimg.cc/R0RBDYjt/file-00000000edf07208a1089ceb51c77687.png',link:'https://ashikdigitalbd.github.io/ashikdigitalbd/'},
-{id:2,title:'🤖 AI Pro অ্যাকাউন্ট',subtitle:'সর্বনিম্ন দামে',image:'https://i.postimg.cc/R0RBDYjt/file-00000000edf07208a1089ceb51c77687.png',link:'#'},
-{id:3,title:'📺 YouTube সার্ভিস',subtitle:'মোনেটাইজেশন সেটআপ',image:'https://images.unsplash.com/photo-1611162616305-c69b3fa7fbe0?w=1200',link:'#'}
-],
-paymentMethods: [
-{id:'bkash',name:'বিকাশ',number:'01933489724',enabled:true,logo:'https://i.imgur.com/7k4qYq3.png'},
-{id:'nagad',name:'নগদ',number:'01933489724',enabled:true,logo:'https://i.imgur.com/8NmVz5c.png'},
-{id:'rocket',name:'রকেট',number:'01933489724',enabled:true,logo:'https://i.imgur.com/YQq7qMh.png'},
-{id:'upay',name:'উপায়',number:'01933489724',enabled:true,logo:'https://i.imgur.com/7Ssvk0p.png'}
-],
-codEnabled: false,
-orders: [],
-customerReviews: [
-{id:1,name:'রাকিব হাসান',rating:5,text:'দারুণ সার্ভিস!',date:'2025-01-15'},
-{id:2,name:'সাব্বির আহমেদ',rating:5,text:'একদম পারফেক্ট!',date:'2025-01-12'},
-{id:3,name:'নাফিজ ইসলাম',rating:5,text:'অসাধারণ সাপোর্ট!',date:'2025-01-10'}
-],
-telegram: {
-botToken:'8732766562:AAEYvZLBWdXf2BmF2zwtddISCy1GDYxMU5g',
-chatId:'7154659074',
-username:'https://t.me/AshikDigitalMarketing',
-notify:true
-},
-whatsapp: {
-number:'8801933489724',
-message:'হ্যালো ASHIK DIGITAL MARKETING!'
-}
-};
-
-let appData = null;
+// লোকাল স্টোরেজ ভিত্তিক ডেটা ম্যানেজমেন্ট (যা কাজ করছে)
 let cart = JSON.parse(localStorage.getItem('ashikCart')||'[]');
 let selectedCategory = null;
 let currentSlide = 0;
@@ -824,1224 +545,209 @@ let detailQty = 1;
 let selectedPayment = '';
 let editingProductId = null;
 let isAdmin = false;
-let isSubAdmin = false;
 let currentUser = '';
 
-// ============================================================
-// JSONBin API ফাংশন (সঠিকভাবে কাজ করবে)
-// ============================================================
+// ডিফল্ট ডেটা
+const DEFAULT_DATA = {
+siteSettings: { name: 'ASHIK DIGITAL MARKETING', logo: 'https://i.postimg.cc/R0RBDYjt/file-00000000edf07208a1089ceb51c77687.png', contact: '01933489724', email: 'freefireemyid01@gmail.com', facebook: 'https://facebook.com', youtube: 'https://youtube.com' },
+admin: { email: 'freefireemyid01@gmail.com', password: 'demo@#1122', recoveryEmail: '' },
+subAdmins: [],
+categories: [{id:1,name:'AI PRO ACCOUNT',icon:'🤖'},{id:2,name:'AI DESIGN',icon:'🎨'},{id:3,name:'YOUTUBE SERVICE',icon:'📺'},{id:4,name:'FACEBOOK SERVICE',icon:'📘'},{id:5,name:'DIGITAL PRODUCT',icon:'💾'}],
+products: [
+{id:1,name:'CAPCUT PRO ACCOUNT',category:1,price:299,oldPrice:599,image:'https://i.postimg.cc/vBmNpvKW/file-00000000c4fc720bb61ee2116f785287.png',desc:'CAPCUT PRO অ্যাকাউন্ট - ১ মাসের ভ্যালিডিটি',badge:'hot',stock:50,rating:4.8,reviews:152},
+{id:2,name:'CANVA PRO ACCOUNT',category:1,price:399,oldPrice:799,image:'https://i.postimg.cc/vZ8Y0LSQ/file-00000000b3407207b8e8d88f71c8f6f4-(1).png',desc:'CANVA PRO - ১ বছরের ভ্যালিডিটি',badge:'sale',stock:30,rating:4.9,reviews:285},
+{id:3,name:'ADOBE PRO ACCOUNT',category:1,price:1499,oldPrice:2999,image:'https://images.unsplash.com/photo-1572044162444-ad60f128bdea?w=400',desc:'ADOBE CREATIVE CLOUD',badge:'new',stock:20,rating:4.7,reviews:98},
+{id:4,name:'AI LOGO DESIGN',category:2,price:499,oldPrice:1000,image:'https://images.unsplash.com/photo-1626785774573-4b799315345d?w=400',desc:'প্রফেশনাল লোগো ডিজাইন',badge:'',stock:100,rating:4.6,reviews:67},
+{id:5,name:'AI BANNER DESIGN',category:2,price:299,oldPrice:600,image:'https://images.unsplash.com/photo-1611162617474-5b21e879e113?w=400',desc:'আকর্ষণীয় ব্যানার ডিজাইন',badge:'hot',stock:100,rating:4.7,reviews:89}
+],
+banners: [{id:1,title:'🔥 মেগা অফার!',subtitle:'৫০% পর্যন্ত ছাড়',image:'https://i.postimg.cc/R0RBDYjt/file-00000000edf07208a1089ceb51c77687.png',link:'#'}],
+paymentMethods: [{id:'bkash',name:'বিকাশ',number:'01933489724',enabled:true,logo:'https://i.imgur.com/7k4qYq3.png'},{id:'nagad',name:'নগদ',number:'01933489724',enabled:true,logo:'https://i.imgur.com/8NmVz5c.png'}],
+codEnabled: false,
+orders: [],
+customerReviews: [{id:1,name:'রাকিব হাসান',rating:5,text:'দারুণ সার্ভিস!',date:'2025-01-15'}],
+telegram: {botToken:'8732766562:AAEYvZLBWdXf2BmF2zwtddISCy1GDYxMU5g',chatId:'7154659074',username:'https://t.me/AshikDigitalMarketing',notify:true},
+whatsapp: {number:'8801933489724',message:'হ্যালো ASHIK DIGITAL MARKETING!'}
+};
 
-async function loadDataFromJSONBin() {
-    try {
-        console.log('JSONBin থেকে ডেটা লোড হচ্ছে...');
-        
-        // আগে localStorage এ ক্যাশে চেক করুন
-        const cached = localStorage.getItem('ashikData_cached');
-        if (cached) {
-            const cachedData = JSON.parse(cached);
-            if (Date.now() - cachedData.timestamp < 300000) { // 5 মিনিট ক্যাশে
-                console.log('ক্যাশে থেকে লোড করা হয়েছে');
-                return cachedData.data;
-            }
-        }
-        
-        let binId = localStorage.getItem('jsonbin_id');
-        
-        if (!binId) {
-            console.log('কোনো বিন আইডি নেই, নতুন তৈরি হচ্ছে...');
-            return await createNewBin();
-        }
-        
-        const response = await fetch(`https://api.jsonbin.io/v3/b/${binId}/latest`, {
-            headers: {
-                'X-Master-Key': JSONBIN_CONFIG.apiKey
-            }
-        });
-        
-        if (response.ok) {
-            const data = await response.json();
-            console.log('JSONBin থেকে ডেটা লোড সফল');
-            const record = data.record;
-            
-            // ক্যাশে আপডেট করুন
-            localStorage.setItem('ashikData_cached', JSON.stringify({
-                data: record,
-                timestamp: Date.now()
-            }));
-            localStorage.setItem('ashikData_backup', JSON.stringify(record));
-            return record;
-        } else {
-            console.log('বিন পাওয়া যায়নি, নতুন তৈরি হচ্ছে...');
-            return await createNewBin();
-        }
-    } catch(e) {
-        console.error('JSONBin লোড এরর:', e);
-        const local = localStorage.getItem('ashikData_backup');
-        if (local) {
-            console.log('লোকাল ব্যাকআপ থেকে লোড');
-            return JSON.parse(local);
-        }
-        return JSON.parse(JSON.stringify(DEFAULT_DATA));
-    }
+function getData() {
+    let d = localStorage.getItem('ashikData');
+    if(!d) return JSON.parse(JSON.stringify(DEFAULT_DATA));
+    return JSON.parse(d);
 }
 
-async function createNewBin() {
-    try {
-        console.log('নতুন JSONBin বিন তৈরি হচ্ছে...');
-        const response = await fetch('https://api.jsonbin.io/v3/b', {
-            method: 'POST',
-            headers: {
-                'Content-Type': 'application/json',
-                'X-Master-Key': JSONBIN_CONFIG.apiKey,
-                'X-Bin-Name': JSONBIN_CONFIG.binName
-            },
-            body: JSON.stringify(DEFAULT_DATA)
-        });
-        
-        if (response.ok) {
-            const data = await response.json();
-            const binId = data.metadata.id;
-            localStorage.setItem('jsonbin_id', binId);
-            localStorage.setItem('ashikData_backup', JSON.stringify(DEFAULT_DATA));
-            console.log('বিন তৈরি সফল, ID:', binId);
-            return JSON.parse(JSON.stringify(DEFAULT_DATA));
-        } else {
-            const error = await response.text();
-            console.error('বিন তৈরি ব্যর্থ:', error);
-            return JSON.parse(JSON.stringify(DEFAULT_DATA));
-        }
-    } catch(e) {
-        console.error('বিন তৈরি এরর:', e);
-        return JSON.parse(JSON.stringify(DEFAULT_DATA));
-    }
-}
-
-async function saveDataToJSONBin(data) {
-    try {
-        console.log('JSONBin এ ডেটা সেভ হচ্ছে...');
-        
-        let binId = localStorage.getItem('jsonbin_id');
-        if (!binId) {
-            console.log('বিন আইডি নেই, নতুন তৈরি হচ্ছে...');
-            await createNewBin();
-            binId = localStorage.getItem('jsonbin_id');
-        }
-        
-        const response = await fetch(`https://api.jsonbin.io/v3/b/${binId}`, {
-            method: 'PUT',
-            headers: {
-                'Content-Type': 'application/json',
-                'X-Master-Key': JSONBIN_CONFIG.apiKey
-            },
-            body: JSON.stringify(data)
-        });
-        
-        if (response.ok) {
-            console.log('JSONBin এ ডেটা সেভ সফল!');
-            localStorage.setItem('ashikData_backup', JSON.stringify(data));
-            localStorage.setItem('ashikData_cached', JSON.stringify({
-                data: data,
-                timestamp: Date.now()
-            }));
-            return true;
-        } else {
-            const error = await response.text();
-            console.error('সেভ ব্যর্থ:', error);
-            return false;
-        }
-    } catch(e) {
-        console.error('সেভ এরর:', e);
-        return false;
-    }
-}
-
-async function getData() {
-    if (appData) return appData;
-    appData = await loadDataFromJSONBin();
-    return appData;
-}
-
-async function saveData(data) {
-    appData = data;
-    const success = await saveDataToJSONBin(data);
-    if (success) {
-        showToast('ডেটা সেভ হয়েছে ✅');
-    } else {
-        showToast('সেভ করতে ব্যর্থ! লোকালি সেভ করা হয়েছে', 'error');
-    }
-    return success;
-}
-
-async function refreshData() {
-    appData = null;
-    localStorage.removeItem('ashikData_cached');
-    return await getData();
-}
-
-// ============================================================
-// বাকি সব ফাংশন আগের মতো থাকবে (showToast, renderHome, ইত্যাদি)
-// কিন্তু সেগুলো async করতে হবে
-// ============================================================
-
-function showToast(msg, type) {
-    type = type || 'success';
-    let c = document.getElementById('toastContainer');
-    let t = document.createElement('div');
-    t.className = 'toast toast-' + type;
-    let icon = type === 'success' ? 'check-circle' : (type === 'error' ? 'times-circle' : 'info-circle');
-    t.innerHTML = '<i class="fas fa-' + icon + '"></i>' + msg;
-    c.appendChild(t);
-    setTimeout(() => t.remove(), 3000);
-}
-
-function previewImg(inputId, previewId) {
-    let url = document.getElementById(inputId).value;
-    let prev = document.getElementById(previewId);
-    prev.innerHTML = url ? '<img src="' + url + '" onerror="this.parentElement.innerHTML=\'<span>📷 লোড হয়নি</span>\'">' : '<span>📷 প্রিভিউ</span>';
+function saveData(data) {
+    localStorage.setItem('ashikData', JSON.stringify(data));
+    showToast('ডেটা সেভ হয়েছে ✅');
+    return true;
 }
 
 function saveCart() { localStorage.setItem('ashikCart', JSON.stringify(cart)); updateCartCount(); }
-function updateCartCount() { document.getElementById('cartCount').textContent = cart.reduce((a, b) => a + b.qty, 0); }
+function updateCartCount() { document.getElementById('cartCount').textContent = cart.reduce((a,b)=>a+b.qty,0); }
+function showToast(msg,type){ type=type||'success'; let c=document.getElementById('toastContainer'); let t=document.createElement('div'); t.className='toast toast-'+type; let icon=type==='success'?'check-circle':'times-circle'; t.innerHTML='<i class="fas fa-'+icon+'"></i>'+msg; c.appendChild(t); setTimeout(()=>t.remove(),3000); }
+function previewImg(inputId,previewId){ let url=document.getElementById(inputId).value; let prev=document.getElementById(previewId); prev.innerHTML=url?'<img src="'+url+'" onerror="this.parentElement.innerHTML=\'<span>📷 লোড হয়নি</span>\'">':'<span>📷 প্রিভিউ</span>'; }
 
-async function showPage(page) {
-    document.querySelectorAll('#mainWebsite .page').forEach(p => p.classList.remove('active'));
-    let pageEl = document.getElementById(page + 'Page');
-    if (pageEl) pageEl.classList.add('active');
-    document.querySelectorAll('.bottom-nav-item').forEach(el => {
-        el.classList.toggle('active', el.dataset.page === page);
+function showPage(page){
+    document.querySelectorAll('#mainWebsite .page').forEach(p=>p.classList.remove('active'));
+    document.getElementById(page+'Page').classList.add('active');
+    if(page==='home')renderHome();
+    if(page==='cart')renderCart();
+    if(page==='checkout')renderCheckout();
+    if(page==='profile')renderProfile();
+    window.scrollTo(0,0);
+}
+
+function renderHome(){
+    let d=getData();
+    document.getElementById('siteName').textContent=d.siteSettings.name;
+    document.getElementById('siteLogo').src=d.siteSettings.logo;
+    document.getElementById('footerSiteName').textContent=d.siteSettings.name;
+    document.getElementById('footerBrand').textContent=d.siteSettings.name;
+    document.getElementById('footerContact').innerHTML='📞 '+d.siteSettings.contact+'<br>📧 '+d.siteSettings.email;
+    let social='';
+    if(d.siteSettings.facebook)social+='<a href="'+d.siteSettings.facebook+'" target="_blank"><i class="fab fa-facebook-f"></i></a>';
+    if(d.whatsapp&&d.whatsapp.number)social+='<a href="https://wa.me/'+d.whatsapp.number+'" target="_blank"><i class="fab fa-whatsapp"></i></a>';
+    document.getElementById('footerSocial').innerHTML=social;
+    let waNum=d.whatsapp?d.whatsapp.number:'';
+    let waMsg=d.whatsapp?d.whatsapp.message:'';
+    document.getElementById('waChatLink').href='https://wa.me/'+waNum+'?text='+encodeURIComponent(waMsg);
+    renderBanners(d); renderCategories(d); renderProducts(d); renderReviews(d);
+}
+
+function renderBanners(d){
+    let slider=document.getElementById('heroSlider');
+    if(!d.banners.length){slider.innerHTML='<div style="height:200px;background:linear-gradient(135deg,var(--primary),var(--secondary));border-radius:16px;display:flex;align-items:center;justify-content:center;color:#fff">🛍️ স্বাগতম!</div>';return;}
+    let html='';
+    d.banners.forEach((b,i)=>{html+='<div class="hero-slide '+(i===0?'active':'')+'" onclick="bannerClick(\''+b.link+'\')"><img src="'+b.image+'"><div class="overlay"><h2>'+b.title+'</h2><p>'+b.subtitle+'</p></div></div>';});
+    slider.innerHTML=html;
+}
+
+function bannerClick(link){if(link&&link!=='#')window.open(link,'_blank');}
+
+function renderCategories(d){
+    let html='';
+    d.categories.forEach(c=>{html+='<div class="cat-item" onclick="filterByCategory('+c.id+')"><div class="cat-icon">'+c.icon+'</div><div class="cat-name">'+c.name+'</div></div>';});
+    document.getElementById('categoryGrid').innerHTML=html;
+}
+
+function filterByCategory(cid){selectedCategory=cid;renderProducts(getData());showToast('ক্যাটাগরি সিলেক্টেড','info');}
+function resetCategory(){selectedCategory=null;renderProducts(getData());showToast('সব প্রোডাক্ট','info');}
+
+function renderProducts(d){
+    let prods=selectedCategory?d.products.filter(p=>p.category===selectedCategory):d.products;
+    let search=document.getElementById('searchInput').value.toLowerCase();
+    if(search)prods=prods.filter(p=>p.name.toLowerCase().includes(search));
+    if(!prods.length){document.getElementById('productGrid').innerHTML='<p style="text-align:center;padding:40px">😔 কোনো প্রোডাক্ট নেই</p>';return;}
+    let html='';
+    prods.forEach(p=>{
+        html+='<div class="product-card"><div class="product-img" onclick="showDetail('+p.id+')"><img src="'+p.image+'">'+(p.badge?'<span class="product-badge '+p.badge+'">'+p.badge.toUpperCase()+'</span>':'')+'</div><div class="product-info"><h3 class="product-name">'+p.name+'</h3><div class="product-price"><span class="current-price">৳'+p.price+'</span>'+(p.oldPrice?'<span class="old-price">৳'+p.oldPrice+'</span>':'')+'</div><button class="add-to-cart" onclick="addToCart('+p.id+')"><i class="fas fa-cart-plus"></i> অর্ডার করুন</button></div></div>';
     });
-    if (page === 'home') await renderHome();
-    if (page === 'cart') renderCart();
-    if (page === 'checkout') renderCheckout();
-    if (page === 'profile') renderProfile();
-    window.scrollTo(0, 0);
-}
-
-async function renderHome() {
-    let d = await getData();
-    document.getElementById('siteName').textContent = d.siteSettings.name;
-    document.getElementById('siteLogo').src = d.siteSettings.logo;
-    document.getElementById('footerSiteName').textContent = d.siteSettings.name;
-    document.getElementById('footerBrand').textContent = d.siteSettings.name;
-    document.getElementById('footerContact').innerHTML = '📞 ' + d.siteSettings.contact + '<br>📧 ' + d.siteSettings.email;
-    document.title = d.siteSettings.name;
-    
-    let social = '';
-    if (d.siteSettings.facebook) social += '<a href="' + d.siteSettings.facebook + '" target="_blank"><i class="fab fa-facebook-f"></i></a>';
-    if (d.siteSettings.youtube) social += '<a href="' + d.siteSettings.youtube + '" target="_blank"><i class="fab fa-youtube"></i></a>';
-    if (d.whatsapp && d.whatsapp.number) social += '<a href="https://wa.me/' + d.whatsapp.number + '" target="_blank"><i class="fab fa-whatsapp"></i></a>';
-    if (d.telegram && d.telegram.username) social += '<a href="' + d.telegram.username + '" target="_blank"><i class="fab fa-telegram"></i></a>';
-    document.getElementById('footerSocial').innerHTML = social;
-    
-    let waNum = d.whatsapp ? d.whatsapp.number : '';
-    let waMsg = d.whatsapp ? d.whatsapp.message : '';
-    document.getElementById('waChatLink').href = 'https://wa.me/' + waNum + '?text=' + encodeURIComponent(waMsg);
-    document.getElementById('tgChatLink').href = d.telegram && d.telegram.username ? d.telegram.username : '#';
-    
-    renderBanners(d);
-    renderCategories(d);
-    renderProducts(d);
-    renderReviews(d);
-}
-
-function renderBanners(d) {
-    let slider = document.getElementById('heroSlider');
-    let dots = document.getElementById('heroDots');
-    if (!d.banners || !d.banners.length) {
-        slider.innerHTML = '<div style="height:200px;background:linear-gradient(135deg,var(--primary),var(--secondary));border-radius:16px;display:flex;align-items:center;justify-content:center;color:#fff;font-size:24px">🛍️ স্বাগতম!</div>';
-        dots.innerHTML = '';
-        return;
-    }
-    let html = ''; let dotHtml = '';
-    d.banners.forEach((b, i) => {
-        html += '<div class="hero-slide ' + (i === 0 ? 'active' : '') + '" onclick="bannerClick(\'' + b.link + '\')">';
-        html += '<img src="' + b.image + '" onerror="this.src=\'https://via.placeholder.com/1200x300/6366f1/fff?text=Banner\'">';
-        html += '<div class="overlay"><h2>' + b.title + '</h2><p>' + b.subtitle + '</p></div></div>';
-        dotHtml += '<div class="hero-dot ' + (i === 0 ? 'active' : '') + '" onclick="goToSlide(' + i + ')"></div>';
-    });
-    slider.innerHTML = html;
-    dots.innerHTML = dotHtml;
-    currentSlide = 0;
-}
-
-function bannerClick(link) { if (link && link !== '#') window.open(link, '_blank'); }
-
-function goToSlide(n) {
-    let slides = document.querySelectorAll('.hero-slide');
-    let dots = document.querySelectorAll('.hero-dot');
-    slides.forEach(s => s.classList.remove('active'));
-    dots.forEach(d => d.classList.remove('active'));
-    currentSlide = n;
-    if (slides[n]) slides[n].classList.add('active');
-    if (dots[n]) dots[n].classList.add('active');
-}
-
-setInterval(() => {
-    let slides = document.querySelectorAll('.hero-slide');
-    if (slides.length > 1) goToSlide((currentSlide + 1) % slides.length);
-}, 4000);
-
-function renderCategories(d) {
-    let html = '';
-    d.categories.forEach(c => {
-        html += '<div class="cat-item" onclick="filterByCategory(' + c.id + ')">';
-        html += '<div class="cat-icon">' + c.icon + '</div>';
-        html += '<div class="cat-name">' + c.name + '</div></div>';
-    });
-    document.getElementById('categoryGrid').innerHTML = html;
-}
-
-async function filterByCategory(cid) {
-    selectedCategory = cid;
-    let d = await getData();
-    renderProducts(d);
-    let cat = d.categories.find(c => c.id === cid);
-    if (cat) showToast(cat.icon + ' ' + cat.name, 'info');
-    setTimeout(() => document.querySelector('.product-grid').scrollIntoView({ behavior: 'smooth' }), 100);
-}
-
-async function resetCategory() {
-    selectedCategory = null;
-    renderProducts(await getData());
-    showToast('সব প্রোডাক্ট দেখানো হচ্ছে', 'info');
-}
-
-function renderProducts(d) {
-    let prods = selectedCategory ? d.products.filter(p => p.category === selectedCategory) : d.products;
-    let search = document.getElementById('searchInput').value.toLowerCase();
-    if (search) prods = prods.filter(p => p.name.toLowerCase().includes(search));
-    if (!prods.length) {
-        document.getElementById('productGrid').innerHTML = '<p style="grid-column:1/-1;text-align:center;padding:40px;color:var(--text-light)">😔 কোনো প্রোডাক্ট পাওয়া যায়নি</p>';
-        return;
-    }
-    let html = '';
-    prods.forEach(p => {
-        let disc = p.oldPrice ? Math.round((1 - p.price / p.oldPrice) * 100) : 0;
-        html += '<div class="product-card">';
-        html += '<div class="product-img" onclick="showDetail(' + p.id + ')">';
-        html += '<img src="' + p.image + '" onerror="this.src=\'https://via.placeholder.com/300x200/eef2ff/6366f1?text=📦\'">';
-        if (p.badge) html += '<span class="product-badge ' + p.badge + '">' + p.badge.toUpperCase() + '</span>';
-        html += '</div><div class="product-info">';
-        html += '<h3 class="product-name" onclick="showDetail(' + p.id + ')">' + p.name + '</h3>';
-        html += '<div class="product-price"><span class="current-price">৳' + p.price + '</span>';
-        if (p.oldPrice) html += '<span class="old-price">৳' + p.oldPrice + '</span><span class="discount-percent">-' + disc + '%</span>';
-        html += '</div><div class="product-rating">';
-        for (let i = 0; i < Math.floor(p.rating || 4); i++) html += '<i class="fas fa-star"></i>';
-        html += '<span>(' + (p.reviews || 0) + ')</span></div>';
-        html += '<button class="add-to-cart" onclick="addToCart(' + p.id + ')"><i class="fas fa-cart-plus"></i> অর্ডার করুন</button>';
-        html += '</div></div>';
-    });
-    document.getElementById('productGrid').innerHTML = html;
-}
-
-async function searchProducts() { renderProducts(await getData()); }
-
-function renderReviews(d) {
-    let html = '';
-    d.customerReviews.forEach(r => {
-        html += '<div class="review-card"><div class="review-header">';
-        html += '<div class="review-avatar">' + r.name.charAt(0) + '</div>';
-        html += '<div><strong>' + r.name + '</strong><div class="review-stars">' + '⭐'.repeat(r.rating) + '</div></div>';
-        html += '</div><p class="review-text">' + r.text + '</p></div>';
-    });
-    document.getElementById('reviewList').innerHTML = html;
-}
-
-function addToCart(pid) {
-    getData().then(d => {
-        let p = d.products.find(x => x.id === pid);
-        if (!p) return;
-        let exist = cart.find(x => x.id === pid);
-        if (exist) exist.qty++;
-        else cart.push({ id: p.id, name: p.name, price: p.price, image: p.image, qty: 1 });
-        saveCart();
-        showToast('কার্টে যোগ হয়েছে! 🛒');
-    });
-}
-
-function removeFromCart(pid) {
-    cart = cart.filter(x => x.id !== pid);
-    saveCart();
-    renderCart();
-}
-
-function updateQty(pid, delta) {
-    let item = cart.find(x => x.id === pid);
-    if (!item) return;
-    item.qty += delta;
-    if (item.qty < 1) removeFromCart(pid);
-    else { saveCart(); renderCart(); }
-}
-
-function renderCart() {
-    let page = document.getElementById('cartPage');
-    if (!cart.length) {
-        page.innerHTML = '<div class="empty-state"><i class="fas fa-shopping-cart"></i><h3>আপনার কার্ট খালি 😔</h3><p style="color:var(--text-light);margin:15px 0">এখনই অর্ডার করুন!</p><button class="btn btn-primary" onclick="showPage(\'home\')">🛍️ শপিং শুরু করুন</button></div>';
-        return;
-    }
-    let total = cart.reduce((a, b) => a + b.price * b.qty, 0);
-    let html = '<div class="pd-back" onclick="showPage(\'home\')"><i class="fas fa-arrow-left"></i> শপিং চালিয়ে যান</div>';
-    html += '<h3 style="margin-bottom:15px">🛒 আপনার কার্ট (' + cart.length + ' প্রোডাক্ট)</h3>';
-    cart.forEach(item => {
-        html += '<div class="cart-item">';
-        html += '<div class="cart-item-img"><img src="' + item.image + '" onerror="this.src=\'https://via.placeholder.com/80/eef2ff/6366f1?text=📦\'"></div>';
-        html += '<div class="cart-item-info"><h4>' + item.name + '</h4><p class="price">৳' + item.price + '</p>';
-        html += '<div class="cart-item-qty"><button onclick="updateQty(' + item.id + ',-1)">-</button><span>' + item.qty + '</span><button onclick="updateQty(' + item.id + ',1)">+</button></div>';
-        html += '</div><div class="cart-item-remove" onclick="removeFromCart(' + item.id + ')"><i class="fas fa-trash"></i></div></div>';
-    });
-    html += '<div class="cart-summary"><div class="row"><span>সাবটোটাল</span><span>৳' + total + '</span></div>';
-    html += '<div class="row total"><span>মোট</span><span>৳' + total + '</span></div>';
-    html += '<button class="btn btn-primary btn-block" style="margin-top:15px" onclick="showPage(\'checkout\')"><i class="fas fa-lock"></i> চেকআউট করুন</button></div>';
-    page.innerHTML = html;
-}
-
-async function showDetail(pid) {
-    let d = await getData();
-    let p = d.products.find(x => x.id === pid);
-    if (!p) return;
-    detailQty = 1;
-    let disc = p.oldPrice ? Math.round((1 - p.price / p.oldPrice) * 100) : 0;
-    let html = '<div class="pd-back" onclick="showPage(\'home\')"><i class="fas fa-arrow-left"></i> পিছনে যান</div>';
-    html += '<div class="pd-image"><img src="' + p.image + '" onerror="this.src=\'https://via.placeholder.com/400/eef2ff/6366f1?text=📦\'"></div>';
-    html += '<div class="pd-info"><h2>' + p.name + '</h2>';
-    html += '<div class="pd-price"><span class="current">৳' + p.price + '</span>';
-    if (p.oldPrice) html += '<span class="old">৳' + p.oldPrice + '</span><span class="badge badge-success">-' + disc + '%</span>';
-    html += '</div><div class="product-rating" style="margin:10px 0">';
-    for (let i = 0; i < Math.floor(p.rating || 4); i++) html += '<i class="fas fa-star"></i>';
-    html += '<span>(' + (p.reviews || 0) + ' রিভিউ)</span></div>';
-    html += '<p class="pd-desc">' + p.desc + '</p>';
-    html += '<div class="pd-qty"><button class="qty-btn" onclick="changeDetailQty(-1)">-</button>';
-    html += '<span class="qty-val" id="detailQty">1</span>';
-    html += '<button class="qty-btn" onclick="changeDetailQty(1)">+</button></div>';
-    html += '<div class="pd-actions">';
-    html += '<button class="btn btn-primary" onclick="addDetailToCart(' + p.id + ')"><i class="fas fa-cart-plus"></i> কার্টে যোগ</button>';
-    html += '<button class="btn btn-secondary" onclick="addDetailToCart(' + p.id + ');showPage(\'checkout\')"><i class="fas fa-bolt"></i> এখনই কিনুন</button>';
-    html += '</div></div>';
-    document.getElementById('detailPage').innerHTML = html;
-    document.querySelectorAll('#mainWebsite .page').forEach(p => p.classList.remove('active'));
-    document.getElementById('detailPage').classList.add('active');
-    window.scrollTo(0, 0);
-}
-
-function changeDetailQty(d) {
-    detailQty = Math.max(1, detailQty + d);
-    let qtyEl = document.getElementById('detailQty');
-    if (qtyEl) qtyEl.textContent = detailQty;
-}
-
-function addDetailToCart(pid) {
-    getData().then(d => {
-        let p = d.products.find(x => x.id === pid);
-        if (!p) return;
-        let e = cart.find(x => x.id === pid);
-        if (e) e.qty += detailQty;
-        else cart.push({ id: p.id, name: p.name, price: p.price, image: p.image, qty: detailQty });
-        saveCart();
-        showToast('কার্টে যোগ হয়েছে! 🛒');
-        detailQty = 1;
-    });
-}
-
-async function renderCheckout() {
-    if (!cart.length) { showPage('cart'); return; }
-    let d = await getData();
-    let total = cart.reduce((a, b) => a + b.price * b.qty, 0);
-    let methods = '';
-    d.paymentMethods.forEach(m => {
-        if (m.enabled) {
-            methods += '<div class="payment-method" onclick="selectPayment(\'' + m.id + '\')" id="pm-' + m.id + '">';
-            methods += '<img src="' + m.logo + '" onerror="this.style.display=\'none\'"><span>' + m.name + '</span></div>';
-        }
-    });
-    if (d.codEnabled) {
-        methods += '<div class="payment-method" onclick="selectPayment(\'cod\')" id="pm-cod">';
-        methods += '<i class="fas fa-truck" style="font-size:26px;color:var(--success);margin-bottom:5px"></i><span>COD</span></div>';
-    }
-    let html = '<div class="pd-back" onclick="showPage(\'cart\')"><i class="fas fa-arrow-left"></i> কার্টে ফিরুন</div>';
-    html += '<div class="checkout-form"><h3 style="margin-bottom:20px">📝 কাস্টমার তথ্য</h3>';
-    html += '<div class="form-row"><div class="form-group"><label>নাম *</label><input type="text" id="coName"></div>';
-    html += '<div class="form-group"><label>ফোন *</label><input type="tel" id="coPhone" placeholder="01XXXXXXXXX"></div></div>';
-    html += '<div class="form-group"><label>ইমেইল / টেলিগ্রাম ID *</label><input type="text" id="coAddress" placeholder="অ্যাকাউন্ট ডেলিভারির জন্য"></div>';
-    html += '<div class="form-group"><label>নোট (ঐচ্ছিক)</label><input type="text" id="coNote"></div>';
-    html += '<h3 style="margin:20px 0 10px">💳 পেমেন্ট মেথড</h3>';
-    html += '<div class="payment-methods">' + methods + '</div>';
-    html += '<div class="payment-instruction" id="paymentInstruction"></div>';
-    html += '<div class="cart-summary" style="margin-top:20px"><div class="row"><span>সাবটোটাল</span><span>৳' + total + '</span></div>';
-    html += '<div class="row total"><span>মোট</span><span>৳' + total + '</span></div></div>';
-    html += '<button class="btn btn-primary btn-block" style="margin-top:15px;padding:15px" onclick="placeOrder()"><i class="fas fa-check-circle"></i> অর্ডার কনফার্ম</button></div>';
-    document.getElementById('checkoutPage').innerHTML = html;
-    selectedPayment = '';
-}
-
-async function selectPayment(method) {
-    selectedPayment = method;
-    document.querySelectorAll('.payment-method').forEach(el => el.classList.remove('selected'));
-    let el = document.getElementById('pm-' + method);
-    if (el) el.classList.add('selected');
-    let d = await getData();
-    let pi = document.getElementById('paymentInstruction');
-    if (method === 'cod') {
-        pi.style.display = 'block';
-        pi.innerHTML = '<div style="text-align:center;padding:20px"><i class="fas fa-truck" style="font-size:40px;color:var(--success)"></i><h3 style="margin:10px 0">ক্যাশ অন ডেলিভারি</h3><p>পণ্য হাতে পেয়ে টাকা পরিশোধ করুন।</p></div>';
-        return;
-    }
-    let pm = d.paymentMethods.find(x => x.id === method);
-    if (!pm) return;
-    let total = cart.reduce((a, b) => a + b.price * b.qty, 0);
-    let html = '<div class="pi-header"><img src="' + pm.logo + '" onerror="this.style.display=\'none\'"><h3>' + pm.name + '</h3></div>';
-    html += '<div class="pi-merchant"><div><strong>' + d.siteSettings.name + '</strong></div><div><strong>' + total + ' BDT</strong></div></div>';
-    html += '<ul class="pi-steps">';
-    html += '<li>আপনার <strong>' + pm.name + '</strong> মোবাইল অ্যাপে যান।</li>';
-    html += '<li><strong>Send Money</strong> -এ ক্লিক করুন।</li>';
-    html += '<li>প্রাপক নম্বর: <strong>' + pm.number + '</strong> <button class="copy-btn" onclick="copyText(\'' + pm.number + '\')">📋 কপি</button></li>';
-    html += '<li>টাকার পরিমাণ: <strong>' + total + ' BDT</strong> <button class="copy-btn" onclick="copyText(\'' + total + '\')">📋 কপি</button></li>';
-    html += '<li>' + pm.name + ' পিন লিখে কনফার্ম করুন।</li>';
-    html += '<li>নিচে <strong>Transaction ID</strong> দিয়ে VERIFY করুন।</li>';
-    html += '</ul><div style="margin-top:15px"><input type="text" id="trxId" placeholder="ট্রানজেকশন আইডি লিখুন" style="margin-bottom:10px">';
-    html += '<button class="btn btn-primary btn-block" onclick="verifyTrx()">VERIFY</button></div>';
-    pi.innerHTML = html;
-    pi.style.display = 'block';
-}
-
-function copyText(t) {
-    navigator.clipboard.writeText(t).then(() => showToast('কপি হয়েছে! ✅'));
-}
-
-function verifyTrx() {
-    let trx = document.getElementById('trxId');
-    if (trx && trx.value) showToast('Transaction ID সেভ হয়েছে ✅');
-    else showToast('Transaction ID দিন', 'error');
-}
-
-async function placeOrder() {
-    let name = document.getElementById('coName').value.trim();
-    let phone = document.getElementById('coPhone').value.trim();
-    let address = document.getElementById('coAddress').value.trim();
-    if (!name || !phone || !address) { showToast('সব তথ্য পূরণ করুন', 'error'); return; }
-    if (!selectedPayment) { showToast('পেমেন্ট মেথড সিলেক্ট করুন', 'error'); return; }
-    
-    let d = await getData();
-    let total = cart.reduce((a, b) => a + b.price * b.qty, 0);
-    let trxEl = document.getElementById('trxId');
-    let order = {
-        id: 'ORD' + Date.now(),
-        customer: { name, phone, address, note: document.getElementById('coNote').value },
-        items: JSON.parse(JSON.stringify(cart)),
-        total,
-        payment: selectedPayment,
-        trxId: trxEl ? trxEl.value : '',
-        status: 'pending',
-        date: new Date().toLocaleString('bn-BD')
-    };
-    
-    d.orders.unshift(order); // নতুন অর্ডার প্রথমে যোগ করুন
-    let saved = await saveData(d);
-    
-    if (saved) {
-        if (d.telegram.botToken && d.telegram.chatId && d.telegram.notify) {
-            sendTelegramOrder(order, d);
-        }
-        cart = [];
-        saveCart();
-        selectedPayment = '';
-        showToast('🎉 অর্ডার সফলভাবে সম্পন্ন হয়েছে!');
-        showPage('profile');
-    } else {
-        showToast('অর্ডার জমা করতে ব্যর্থ! আবার চেষ্টা করুন।', 'error');
-    }
-}
-
-function sendTelegramOrder(order, d) {
-    let items = order.items.map(i => '• ' + i.name + ' x' + i.qty + ' = ৳' + (i.price * i.qty)).join('\n');
-    let msg = '🛒 *নতুন অর্ডার!*\n\n📋 আইডি: ' + order.id + '\n👤 নাম: ' + order.customer.name + '\n📞 ফোন: ' + order.customer.phone + '\n📧 আইডি: ' + order.customer.address + '\n\n📦 *পণ্যসমূহ:*\n' + items + '\n\n💰 মোট: ৳' + order.total + '\n💳 পেমেন্ট: ' + order.payment;
-    if (order.trxId) msg += '\n🔢 TrxID: ' + order.trxId;
-    msg += '\n📅 ' + order.date;
-    
-    fetch('https://api.telegram.org/bot' + d.telegram.botToken + '/sendMessage', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ chat_id: d.telegram.chatId, text: msg, parse_mode: 'Markdown' })
-    }).catch(e => console.log('Telegram error:', e));
-}
-
-function renderProfile() {
-    let phone = localStorage.getItem('customerPhone');
-    let page = document.getElementById('profilePage');
-    if (!phone) {
-        page.innerHTML = '<div class="pd-back" onclick="showPage(\'home\')"><i class="fas fa-arrow-left"></i> হোমে যান</div>' +
-            '<div class="profile-welcome"><div class="profile-welcome-icon">👤</div>' +
-            '<h2>স্বাগতম! 👋</h2><p>আপনার অর্ডার দেখতে ফোন নম্বর দিন</p>' +
-            '<input type="tel" id="profilePhone" placeholder="📞 01XXXXXXXXX" maxlength="15">' +
-            '<button class="btn btn-primary btn-block" onclick="loginProfile()"><i class="fas fa-arrow-right"></i> প্রোফাইল দেখুন</button></div>';
-        return;
-    }
-    showCustomerProfile(phone);
-}
-
-function loginProfile() {
-    let phone = document.getElementById('profilePhone').value.trim();
-    if (!phone || phone.length < 10) { showToast('সঠিক ফোন নম্বর দিন', 'error'); return; }
-    localStorage.setItem('customerPhone', phone);
-    showCustomerProfile(phone);
-}
-
-function profileLogout() {
-    localStorage.removeItem('customerPhone');
-    renderProfile();
-    showToast('লগআউট সফল', 'info');
-}
-
-async function showCustomerProfile(phone) {
-    let d = await getData();
-    let orders = d.orders.filter(o => o.customer.phone === phone);
-    let totalSpent = orders.reduce((a, b) => a + b.total, 0);
-    let completed = orders.filter(o => o.status === 'confirmed').length;
-    let cName = orders.length ? orders[0].customer.name : 'কাস্টমার';
-    
-    let html = '<div class="pd-back" onclick="showPage(\'home\')"><i class="fas fa-arrow-left"></i> হোমে যান</div>';
-    html += '<div class="profile-header"><button class="profile-logout" onclick="profileLogout()">🚪 লগআউট</button>';
-    html += '<div class="profile-avatar">👤</div><h3>' + cName + '</h3><p>📞 ' + phone + '</p>';
-    html += '<div class="profile-stats">';
-    html += '<div class="profile-stat"><div class="num">' + orders.length + '</div><div class="label">মোট অর্ডার</div></div>';
-    html += '<div class="profile-stat"><div class="num">' + completed + '</div><div class="label">সম্পূর্ণ</div></div>';
-    html += '<div class="profile-stat"><div class="num">৳' + totalSpent + '</div><div class="label">মোট খরচ</div></div>';
-    html += '</div></div>';
-    html += '<div class="profile-orders"><h3 style="margin-bottom:15px">📦 আমার অর্ডার</h3>';
-    
-    if (!orders.length) {
-        html += '<p style="text-align:center;color:var(--text-light);padding:30px">এখনো কোনো অর্ডার নেই 😔<br><br><button class="btn btn-primary btn-sm" onclick="showPage(\'home\')">🛍️ শপিং শুরু করুন</button></p>';
-    } else {
-        orders.forEach(o => {
-            let badge = 'badge-warning', text = '⏳ পেন্ডিং';
-            if (o.status === 'confirmed') { badge = 'badge-success'; text = '✅ কনফার্ম'; }
-            else if (o.status === 'cancelled') { badge = 'badge-danger'; text = '❌ বাতিল'; }
-            else if (o.status === 'processing') { badge = 'badge-processing'; text = '🔄 প্রসেসিং'; }
-            html += '<div class="profile-order-item">';
-            html += '<div class="profile-order-header"><strong>' + o.id + '</strong>';
-            html += '<span class="badge ' + badge + '">' + text + '</span></div>';
-            o.items.forEach(i => { html += '<p style="font-size:13px;color:var(--text-light)">• ' + i.name + ' x' + i.qty + ' = ৳' + (i.price * i.qty) + '</p>'; });
-            html += '<div style="display:flex;justify-content:space-between;margin-top:8px;font-size:13px;flex-wrap:wrap"><span>📅 ' + o.date + '</span><strong>মোট: ৳' + o.total + '</strong></div>';
-            html += '</div>';
-        });
-    }
-    html += '</div>';
-    document.getElementById('profilePage').innerHTML = html;
-}
-
-function toggleLiveChat() {
-    document.getElementById('lcTooltip').classList.toggle('show');
-}
-
-// ============================================================
-// অ্যাডমিন ফাংশন (সিম্পলিফাইড)
-// ============================================================
-
-function showAdminLogin() {
-    document.getElementById('mainWebsite').style.display = 'none';
-    document.getElementById('adminLoginPage').classList.add('active');
-    document.getElementById('adminPanel').classList.remove('active');
-    getData().then(d => {
-        document.getElementById('loginLogo').src = d.siteSettings.logo;
-    });
-}
-
-async function adminLogin() {
-    let email = document.getElementById('adminEmail').value.trim();
-    let pass = document.getElementById('adminPass').value;
-    let d = await getData();
-    if (email === d.admin.email && pass === d.admin.password) {
-        isAdmin = true; isSubAdmin = false; currentUser = 'Admin';
-        showAdminPanel();
-        showToast('স্বাগতম, Admin! 👋');
-        return;
-    }
-    let sa = d.subAdmins.find(x => x.email === email && x.password === pass);
-    if (sa) {
-        isAdmin = false; isSubAdmin = true; currentUser = sa.name;
-        showAdminPanel();
-        showToast('স্বাগতম, ' + sa.name + '!');
-        return;
-    }
-    showToast('ভুল ইমেইল বা পাসওয়ার্ড', 'error');
-}
-
-async function showAdminPanel() {
-    document.getElementById('adminLoginPage').classList.remove('active');
-    document.getElementById('mainWebsite').style.display = 'none';
-    document.getElementById('adminPanel').classList.add('active');
-    let d = await getData();
-    document.getElementById('sidebarLogo').src = d.siteSettings.logo;
-    document.getElementById('adminWelcome').textContent = '👋 ' + currentUser;
-    
-    // আপডেটেড ড্যাশবোর্ড দেখান
-    await renderAdminDashboard();
-    await renderAdminOrders();
-    await renderAdminProducts();
-    renderAdminCategories();
-    renderAdminBanners();
-    renderPaymentSettings();
-    renderSiteSettings();
-    renderTelegramSettings();
-    renderWhatsAppSettings();
-    renderSubAdmins();
-    renderSecuritySettings();
-    renderAdminReviews();
-}
-
-function adminLogout() {
-    isAdmin = false; isSubAdmin = false; currentUser = '';
-    document.getElementById('adminPanel').classList.remove('active');
-    document.getElementById('mainWebsite').style.display = 'block';
-    showPage('home');
-    showToast('লগআউট সফল');
-}
-
-function backToHome() {
-    document.getElementById('adminLoginPage').classList.remove('active');
-    document.getElementById('adminPanel').classList.remove('active');
-    document.getElementById('mainWebsite').style.display = 'block';
-    showPage('home');
-}
-
-async function renderAdminDashboard() {
-    let d = await getData();
-    document.getElementById('totalProducts').textContent = d.products.length;
-    document.getElementById('totalOrders').textContent = d.orders.length;
-    document.getElementById('confirmedOrders').textContent = d.orders.filter(o => o.status === 'confirmed').length;
-    document.getElementById('totalRevenue').textContent = '৳' + d.orders.filter(o => o.status === 'confirmed').reduce((a, b) => a + b.total, 0);
-    
-    let recent = d.orders.slice(0, 5);
-    let html = '';
-    recent.forEach(o => {
-        let badge = 'badge-warning';
-        if (o.status === 'confirmed') badge = 'badge-success';
-        else if (o.status === 'cancelled') badge = 'badge-danger';
-        else if (o.status === 'processing') badge = 'badge-processing';
-        html += `<tr><td><strong>${o.id}</strong></td><td>${o.customer.name}</td><td>৳${o.total}</td><td><span class="badge ${badge}">${o.status}</span></td></tr>`;
-    });
-    if (!recent.length) html = '<tr><td colspan="4" style="text-align:center">কোনো অর্ডার নেই</td></tr>';
-    document.getElementById('recentOrdersTable').innerHTML = html;
-}
-
-async function renderAdminOrders(filter = 'all') {
-    let d = await getData();
-    let orders = filter === 'all' ? d.orders : d.orders.filter(o => o.status === filter);
-    let html = '';
-    orders.forEach(o => {
-        let badge = 'badge-warning';
-        if (o.status === 'confirmed') badge = 'badge-success';
-        else if (o.status === 'cancelled') badge = 'badge-danger';
-        else if (o.status === 'processing') badge = 'badge-processing';
-        html += `<tr>
-            <td><strong>${o.id}</strong></td>
-            <td>${o.customer.name}</td>
-            <td>${o.customer.phone}</td>
-            <td>৳${o.total}</td>
-            <td>${o.payment}</td>
-            <td><span class="badge ${badge}">${o.status}</span></td>
-            <td>
-                <select onchange="updateOrderStatus('${o.id}', this.value)" style="padding:4px;border-radius:5px;font-size:11px">
-                    <option value="pending" ${o.status === 'pending' ? 'selected' : ''}>⏳ পেন্ডিং</option>
-                    <option value="processing" ${o.status === 'processing' ? 'selected' : ''}>🔄 প্রসেসিং</option>
-                    <option value="confirmed" ${o.status === 'confirmed' ? 'selected' : ''}>✅ কনফার্ম</option>
-                    <option value="cancelled" ${o.status === 'cancelled' ? 'selected' : ''}>❌ বাতিল</option>
-                </select>
-            </td>
-        </tr>`;
-    });
-    if (!orders.length) html = '<tr><td colspan="7" style="text-align:center">কোনো অর্ডার নেই</td></tr>';
-    document.getElementById('ordersTableBody').innerHTML = html;
-}
-
-async function updateOrderStatus(oid, status) {
-    let d = await getData();
-    let o = d.orders.find(x => x.id === oid);
-    if (o) {
-        o.status = status;
-        await saveData(d);
-        await renderAdminDashboard();
-        await renderAdminOrders();
-        showToast('স্ট্যাটাস আপডেট ✅');
-    }
-}
-
-function filterOrders(f) { renderAdminOrders(f); }
-
-async function renderAdminProducts() {
-    let d = await getData();
-    let html = '';
-    d.products.forEach(p => {
-        let cat = d.categories.find(c => c.id === p.category);
-        html += `<div class="admin-list-item">
-            <img src="${p.image}" onerror="this.src='https://via.placeholder.com/55/eef2ff/6366f1?text=📦'">
-            <div class="info"><strong>${p.name}</strong><p>${cat ? cat.name : 'N/A'} | ৳${p.price} | স্টক: ${p.stock}</p></div>
-            <div class="actions">
-                <button class="btn btn-sm btn-warning" onclick="editProduct(${p.id})"><i class="fas fa-edit"></i></button>
-                <button class="btn btn-sm btn-danger" onclick="deleteProduct(${p.id})"><i class="fas fa-trash"></i></button>
-            </div>
-        </div>`;
-    });
-    document.getElementById('adminProductList').innerHTML = html || '<p style="text-align:center;padding:20px">কোনো প্রোডাক্ট নেই</p>';
-    updateProductCategorySelect();
-}
-
-async function updateProductCategorySelect() {
-    let d = await getData();
-    let sel = document.getElementById('pCategory');
-    if (!sel) return;
-    sel.innerHTML = d.categories.map(c => `<option value="${c.id}">${c.icon} ${c.name}</option>`).join('');
-}
-
-async function saveProduct() {
-    let d = await getData();
-    let p = {
-        id: editingProductId || Date.now(),
-        name: document.getElementById('pName').value.trim(),
-        category: parseInt(document.getElementById('pCategory').value),
-        price: parseInt(document.getElementById('pPrice').value) || 0,
-        oldPrice: parseInt(document.getElementById('pOldPrice').value) || 0,
-        desc: document.getElementById('pDesc').value,
-        image: document.getElementById('pImage').value,
-        badge: document.getElementById('pBadge').value,
-        stock: parseInt(document.getElementById('pStock').value) || 0,
-        rating: 4.5,
-        reviews: 0
-    };
-    if (!p.name || !p.price) { showToast('নাম এবং মূল্য আবশ্যক', 'error'); return; }
-    
-    if (editingProductId) {
-        let idx = d.products.findIndex(x => x.id === editingProductId);
-        if (idx > -1) d.products[idx] = p;
-        showToast('আপডেট হয়েছে ✅');
-    } else {
-        d.products.push(p);
-        showToast('যোগ হয়েছে ✅');
-    }
-    
-    await saveData(d);
-    closeProductForm();
-    await renderAdminProducts();
-    await renderAdminDashboard();
-    editingProductId = null;
-}
-
-async function deleteProduct(pid) {
-    if (!confirm('মুছে ফেলতে চান?')) return;
-    let d = await getData();
-    d.products = d.products.filter(x => x.id !== pid);
-    await saveData(d);
-    await renderAdminProducts();
-    await renderAdminDashboard();
-    showToast('মুছে ফেলা হয়েছে');
-}
-
-async function saveCategory() {
-    let d = await getData();
-    let name = document.getElementById('catName').value.trim();
-    let icon = document.getElementById('catIcon').value || '📦';
-    if (!name) { showToast('নাম দিন', 'error'); return; }
-    d.categories.push({ id: Date.now(), name, icon });
-    await saveData(d);
-    document.getElementById('categoryFormCard').style.display = 'none';
-    renderAdminCategories();
-    updateProductCategorySelect();
-    showToast('যোগ হয়েছে ✅');
-}
-
-async function saveSiteSettings() {
-    let d = await getData();
-    d.siteSettings.name = document.getElementById('setSiteName').value;
-    d.siteSettings.logo = document.getElementById('setLogo').value;
-    d.siteSettings.contact = document.getElementById('setContact').value;
-    d.siteSettings.email = document.getElementById('setEmail').value;
-    d.siteSettings.facebook = document.getElementById('setFacebook').value;
-    d.siteSettings.youtube = document.getElementById('setYoutube').value;
-    await saveData(d);
-    showToast('সেভ হয়েছে ✅');
-}
-
-async function saveTelegramSettings() {
-    let d = await getData();
-    d.telegram = {
-        botToken: document.getElementById('tgBotToken').value.trim(),
-        chatId: document.getElementById('tgChatId').value.trim(),
-        username: document.getElementById('tgUsername').value.trim(),
-        notify: document.getElementById('tgNotify').checked
-    };
-    await saveData(d);
-    showToast('সেভ হয়েছে ✅');
-}
-
-async function saveWhatsAppSettings() {
-    let d = await getData();
-    d.whatsapp = {
-        number: document.getElementById('waNumber').value.trim(),
-        message: document.getElementById('waMessage').value
-    };
-    await saveData(d);
-    showToast('সেভ হয়েছে ✅');
-}
-
-// অন্যান্য অ্যাডমিন ফাংশন (সম্পূর্ণ করতে চাইলে জানাবেন)
-
-function openProductForm() {
-    editingProductId = null;
-    document.getElementById('productFormCard').style.display = 'block';
-    document.getElementById('productFormTitle').textContent = 'নতুন প্রোডাক্ট';
-    ['pName', 'pPrice', 'pOldPrice', 'pDesc', 'pImage'].forEach(id => document.getElementById(id).value = '');
-    document.getElementById('pStock').value = '100';
-    document.getElementById('pBadge').value = '';
-    document.getElementById('pImgPreview').innerHTML = '<span>📷 প্রিভিউ</span>';
-}
-
-async function editProduct(pid) {
-    let d = await getData();
-    let p = d.products.find(x => x.id === pid);
-    if (!p) return;
-    editingProductId = pid;
-    document.getElementById('productFormCard').style.display = 'block';
-    document.getElementById('productFormTitle').textContent = 'প্রোডাক্ট এডিট';
-    document.getElementById('pName').value = p.name;
-    document.getElementById('pCategory').value = p.category;
-    document.getElementById('pPrice').value = p.price;
-    document.getElementById('pOldPrice').value = p.oldPrice || '';
-    document.getElementById('pDesc').value = p.desc;
-    document.getElementById('pImage').value = p.image;
-    document.getElementById('pBadge').value = p.badge || '';
-    document.getElementById('pStock').value = p.stock;
-    previewImg('pImage', 'pImgPreview');
-}
-
-function closeProductForm() { document.getElementById('productFormCard').style.display = 'none'; }
-
-function openCategoryForm() {
-    document.getElementById('categoryFormCard').style.display = 'block';
-    document.getElementById('catName').value = '';
-    document.getElementById('catIcon').value = '';
-}
-
-function toggleSidebar() {
-    document.getElementById('adminSidebar').classList.toggle('mobile-open');
-}
-
-function showAdminSection(sec) {
-    document.querySelectorAll('.admin-section').forEach(el => el.classList.remove('active'));
-    let s = document.getElementById('sec-' + sec);
-    if (s) s.classList.add('active');
-    let titles = { dashboard: 'ড্যাশবোর্ড', products: 'প্রোডাক্ট', categories: 'ক্যাটাগরি', orders: 'অর্ডার', banners: 'ব্যানার', payment: 'পেমেন্ট সেটিংস', settings: 'সাইট সেটিংস', telegram: 'টেলিগ্রাম বট', whatsapp: 'WhatsApp', subadmins: 'সাব-অ্যাডমিন', security: 'সিকিউরিটি', reviews: 'রিভিউ' };
-    document.getElementById('adminPageTitle').textContent = titles[sec] || sec;
-    if (window.innerWidth < 768) document.getElementById('adminSidebar').classList.remove('mobile-open');
-}
-
-// ডামি ফাংশন (প্রয়োজনে সম্পূর্ণ করা যাবে)
-async function renderAdminCategories() {
-    let d = await getData();
-    let html = '';
-    d.categories.forEach(c => {
-        html += `<div class="admin-list-item">
-            <span style="font-size:30px;width:55px;text-align:center">${c.icon}</span>
-            <div class="info"><strong>${c.name}</strong></div>
-            <div class="actions"><button class="btn btn-sm btn-danger" onclick="deleteCategory(${c.id})"><i class="fas fa-trash"></i></button></div>
-        </div>`;
-    });
-    document.getElementById('adminCategoryList').innerHTML = html;
-}
-
-async function deleteCategory(cid) {
-    if (!confirm('মুছে ফেলতে চান?')) return;
-    let d = await getData();
-    d.categories = d.categories.filter(x => x.id !== cid);
-    await saveData(d);
-    renderAdminCategories();
-    showToast('মুছে ফেলা হয়েছে');
-}
-
-async function renderAdminBanners() {
-    let d = await getData();
-    let html = '';
-    d.banners.forEach(b => {
-        html += `<div class="admin-list-item">
-            <img src="${b.image}" style="width:80px;height:45px">
-            <div class="info"><strong>${b.title}</strong><p>${b.subtitle}</p></div>
-            <div class="actions"><button class="btn btn-sm btn-danger" onclick="deleteBanner(${b.id})"><i class="fas fa-trash"></i></button></div>
-        </div>`;
-    });
-    document.getElementById('adminBannerList').innerHTML = html;
-}
-
-async function saveBanner() {
-    let d = await getData();
-    let b = {
-        id: Date.now(),
-        title: document.getElementById('bannerTitle').value.trim(),
-        subtitle: document.getElementById('bannerSubtitle').value,
-        image: document.getElementById('bannerImage').value,
-        link: document.getElementById('bannerLink').value || '#'
-    };
-    if (!b.title) { showToast('শিরোনাম দিন', 'error'); return; }
-    d.banners.push(b);
-    await saveData(d);
-    document.getElementById('bannerFormCard').style.display = 'none';
-    renderAdminBanners();
-    showToast('যোগ হয়েছে ✅');
-}
-
-async function deleteBanner(bid) {
-    if (!confirm('মুছে ফেলতে চান?')) return;
-    let d = await getData();
-    d.banners = d.banners.filter(x => x.id !== bid);
-    await saveData(d);
-    renderAdminBanners();
-    showToast('মুছে ফেলা হয়েছে');
-}
-
-function openBannerForm() {
-    document.getElementById('bannerFormCard').style.display = 'block';
-    ['bannerTitle', 'bannerSubtitle', 'bannerImage', 'bannerLink'].forEach(id => document.getElementById(id).value = '');
-}
-
-async function renderPaymentSettings() {
-    let d = await getData();
-    let html = '';
-    d.paymentMethods.forEach(pm => {
-        html += `<div class="pm-edit-card">
-            <div class="pm-edit-header">
-                <div class="pm-edit-name"><img src="${pm.logo}"><strong>${pm.name}</strong></div>
-                <label class="switch"><input type="checkbox" ${pm.enabled ? 'checked' : ''} onchange="togglePayment('${pm.id}')"><span class="slider"></span></label>
-            </div>
-            <div class="form-group"><label>📞 নম্বর</label><input type="text" id="pmnum-${pm.id}" value="${pm.number}"></div>
-            <div class="form-group"><label>🖼️ লোগো URL</label><input type="text" id="pmlogo-${pm.id}" value="${pm.logo}"></div>
-            <button class="btn btn-primary btn-sm" onclick="savePaymentMethod('${pm.id}')"><i class="fas fa-save"></i> সেভ করুন</button>
-        </div>`;
-    });
-    document.getElementById('paymentMethodsList').innerHTML = html;
-    document.getElementById('codToggle').checked = d.codEnabled;
-}
-
-async function savePaymentMethod(id) {
-    let d = await getData();
-    let pm = d.paymentMethods.find(x => x.id === id);
-    if (pm) {
-        pm.number = document.getElementById(`pmnum-${id}`).value.trim();
-        pm.logo = document.getElementById(`pmlogo-${id}`).value.trim();
-        await saveData(d);
-        showToast(pm.name + ' সেভ হয়েছে ✅');
-    }
-}
-
-async function togglePayment(id) {
-    let d = await getData();
-    let pm = d.paymentMethods.find(x => x.id === id);
-    if (pm) { pm.enabled = !pm.enabled; await saveData(d); showToast(pm.name + ' ' + (pm.enabled ? 'চালু' : 'বন্ধ')); }
-}
-
-async function toggleCOD() {
-    let d = await getData();
-    d.codEnabled = document.getElementById('codToggle').checked;
-    await saveData(d);
-    showToast('COD ' + (d.codEnabled ? 'চালু' : 'বন্ধ'));
-}
-
-async function renderSiteSettings() {
-    let d = await getData();
-    document.getElementById('setSiteName').value = d.siteSettings.name;
-    document.getElementById('setLogo').value = d.siteSettings.logo;
-    document.getElementById('logoPreview').src = d.siteSettings.logo;
-    document.getElementById('setContact').value = d.siteSettings.contact;
-    document.getElementById('setEmail').value = d.siteSettings.email;
-    document.getElementById('setFacebook').value = d.siteSettings.facebook || '';
-    document.getElementById('setYoutube').value = d.siteSettings.youtube || '';
-}
-
-async function renderTelegramSettings() {
-    let d = await getData();
-    document.getElementById('tgBotToken').value = d.telegram.botToken || '';
-    document.getElementById('tgChatId').value = d.telegram.chatId || '';
-    document.getElementById('tgUsername').value = d.telegram.username || '';
-    document.getElementById('tgNotify').checked = d.telegram.notify !== false;
-}
-
-async function testTelegram() {
-    let d = await getData();
-    if (!d.telegram.botToken || !d.telegram.chatId) { showToast('Token ও Chat ID দিন', 'error'); return; }
-    fetch(`https://api.telegram.org/bot${d.telegram.botToken}/sendMessage`, {
-        method: 'POST', headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ chat_id: d.telegram.chatId, text: '✅ টেস্ট মেসেজ! ASHIK DIGITAL MARKETING - বট সফলভাবে সংযুক্ত হয়েছে।' })
-    }).then(r => r.json()).then(r => {
-        if (r.ok) showToast('পাঠানো হয়েছে ✅');
-        else showToast('এরর: ' + r.description, 'error');
-    }).catch(e => showToast('এরর', 'error'));
-}
-
-async function renderWhatsAppSettings() {
-    let d = await getData();
-    document.getElementById('waNumber').value = d.whatsapp ? d.whatsapp.number : '';
-    document.getElementById('waMessage').value = d.whatsapp ? d.whatsapp.message : '';
-}
-
-async function renderSubAdmins() {
-    let d = await getData();
-    let html = '';
-    d.subAdmins.forEach((sa, i) => {
-        html += `<div class="admin-list-item">
-            <div style="width:45px;height:45px;border-radius:50%;background:var(--info);color:#fff;display:flex;align-items:center;justify-content:center;font-weight:700">${sa.name.charAt(0)}</div>
-            <div class="info"><strong>${sa.name}</strong><p>${sa.email}</p></div>
-            <div class="actions"><button class="btn btn-sm btn-danger" onclick="removeSubAdmin(${i})"><i class="fas fa-trash"></i></button></div>
-        </div>`;
-    });
-    document.getElementById('subAdminList').innerHTML = html || '<p style="text-align:center;padding:20px">কোনো সাব-অ্যাডমিন নেই</p>';
-}
-
-function openSubAdminForm() {
-    getData().then(d => {
-        if (d.subAdmins.length >= 3) { showToast('সর্বোচ্চ ৩ জন', 'error'); return; }
-        document.getElementById('subAdminFormCard').style.display = 'block';
-        ['saName', 'saEmail', 'saPass'].forEach(id => document.getElementById(id).value = '');
-    });
-}
-
-async function saveSubAdmin() {
-    let d = await getData();
-    let sa = {
-        name: document.getElementById('saName').value.trim(),
-        email: document.getElementById('saEmail').value.trim(),
-        password: document.getElementById('saPass').value
-    };
-    if (!sa.name || !sa.email || !sa.password) { showToast('সব তথ্য পূরণ করুন', 'error'); return; }
-    d.subAdmins.push(sa);
-    await saveData(d);
-    document.getElementById('subAdminFormCard').style.display = 'none';
-    renderSubAdmins();
-    showToast('যোগ হয়েছে ✅');
-}
-
-async function removeSubAdmin(i) {
-    if (!confirm('মুছে ফেলতে চান?')) return;
-    let d = await getData();
-    d.subAdmins.splice(i, 1);
-    await saveData(d);
-    renderSubAdmins();
-    showToast('মুছে ফেলা হয়েছে');
-}
-
-async function renderSecuritySettings() {
-    let d = await getData();
-    document.getElementById('recoveryEmail').value = d.admin.recoveryEmail || '';
-}
-
-async function changePassword() {
-    let d = await getData();
-    let current = document.getElementById('currentPass').value;
-    let newP = document.getElementById('newPass').value;
-    let confirmP = document.getElementById('confirmPass').value;
-    if (current !== d.admin.password) { showToast('বর্তমান পাসওয়ার্ড ভুল', 'error'); return; }
-    if (newP !== confirmP) { showToast('পাসওয়ার্ড মিলছে না', 'error'); return; }
-    if (newP.length < 6) { showToast('কমপক্ষে ৬ অক্ষর', 'error'); return; }
-    let code = Math.floor(100000 + Math.random() * 900000);
-    if (d.telegram.botToken && d.telegram.chatId) {
-        fetch(`https://api.telegram.org/bot${d.telegram.botToken}/sendMessage`, {
-            method: 'POST', headers: { 'Content-Type': 'application/json' },
-            body: JSON.stringify({ chat_id: d.telegram.chatId, text: '🔐 পাসওয়ার্ড পরিবর্তন কোড: ' + code })
-        }).catch(e => console.log(e));
-    }
-    let userCode = prompt('টেলিগ্রামে কোড দিন (ডেমো: ' + code + '):');
-    if (userCode != code) { showToast('ভুল কোড', 'error'); return; }
-    d.admin.password = newP;
-    await saveData(d);
-    ['currentPass', 'newPass', 'confirmPass'].forEach(id => document.getElementById(id).value = '');
-    showToast('পরিবর্তন হয়েছে ✅');
-}
-
-async function changeEmail() {
-    let d = await getData();
-    let newEmail = document.getElementById('newEmail').value.trim();
-    let recovery = document.getElementById('recoveryEmail').value.trim();
-    if (!newEmail) { showToast('ইমেইল দিন', 'error'); return; }
-    d.admin.email = newEmail;
-    d.admin.recoveryEmail = recovery;
-    await saveData(d);
-    showToast('আপডেট হয়েছে ✅');
-}
-
-async function renderAdminReviews() {
-    let d = await getData();
-    let html = '';
-    d.customerReviews.forEach((r, i) => {
-        html += `<div class="admin-list-item">
-            <div class="info">
-                <strong>${r.name}</strong> ${'⭐'.repeat(r.rating)}
-                <p>${r.text}</p>
-                <small>${r.date}</small>
-            </div>
-            <div class="actions"><button class="btn btn-sm btn-danger" onclick="deleteReview(${i})"><i class="fas fa-trash"></i></button></div>
-        </div>`;
-    });
-    document.getElementById('adminReviewList').innerHTML = html;
-}
-
-async function deleteReview(i) {
-    let d = await getData();
-    d.customerReviews.splice(i, 1);
-    await saveData(d);
-    renderAdminReviews();
-    showToast('মুছে ফেলা হয়েছে');
-}
-
-async function forgotPassword() {
-    let d = await getData();
-    let code = Math.floor(100000 + Math.random() * 900000);
-    if (d.telegram.botToken && d.telegram.chatId) {
-        fetch(`https://api.telegram.org/bot${d.telegram.botToken}/sendMessage`, {
-            method: 'POST', headers: { 'Content-Type': 'application/json' },
-            body: JSON.stringify({ chat_id: d.telegram.chatId, text: '🔐 পাসওয়ার্ড রিসেট কোড: ' + code })
-        }).catch(e => console.log(e));
-    }
-    let userCode = prompt('টেলিগ্রামে পাঠানো কোড দিন (ডেমো: ' + code + '):');
-    if (userCode == code) {
-        let newPass = prompt('নতুন পাসওয়ার্ড দিন:');
-        if (newPass) { d.admin.password = newPass; await saveData(d); showToast('পাসওয়ার্ড পরিবর্তন হয়েছে ✅'); }
-    } else if (userCode) { showToast('ভুল কোড', 'error'); }
-}
-
-function viewOrder(oid) {
-    getData().then(d => {
-        let o = d.orders.find(x => x.id === oid);
-        if (!o) return;
-        let html = `<h3>📋 অর্ডার ডিটেইল</h3>
-            <p><strong>ID:</strong> ${o.id}</p>
-            <p><strong>তারিখ:</strong> ${o.date}</p>
-            <hr>
-            <p><strong>👤 নাম:</strong> ${o.customer.name}</p>
-            <p><strong>📞 ফোন:</strong> ${o.customer.phone}</p>
-            <p><strong>📧 ID:</strong> ${o.customer.address}</p>
-            ${o.customer.note ? `<p><strong>📝 নোট:</strong> ${o.customer.note}</p>` : ''}
-            <hr><h4>পণ্যসমূহ:</h4>
-            ${o.items.map(i => `<p>• ${i.name} x${i.qty} = ৳${i.price * i.qty}</p>`).join('')}
-            <hr>
-            <p><strong>💳 পেমেন্ট:</strong> ${o.payment}</p>
-            ${o.trxId ? `<p><strong>🔢 TrxID:</strong> ${o.trxId}</p>` : ''}
-            <p><strong>💰 মোট:</strong> ৳${o.total}</p>`;
-        document.getElementById('orderDetailContent').innerHTML = html;
-        document.getElementById('orderModal').classList.add('active');
-    });
-}
-
-function closeOrderDetail() { document.getElementById('orderModal').classList.remove('active'); }
-
-// ============================================================
-// ইনিশিয়ালাইজেশন
-// ============================================================
-
-async function init() {
-    updateCartCount();
-    await renderHome();
-    if (window.location.hash === '#admin') showAdminLogin();
-}
-
-window.addEventListener('hashchange', () => {
-    if (window.location.hash === '#admin') showAdminLogin();
-});
-
+    document.getElementById('productGrid').innerHTML=html;
+}
+
+function searchProducts(){renderProducts(getData());}
+function renderReviews(d){let html='';d.customerReviews.forEach(r=>{html+='<div class="review-card"><div class="review-header"><div class="review-avatar">'+r.name.charAt(0)+'</div><div><strong>'+r.name+'</strong><div class="review-stars">'+'⭐'.repeat(r.rating)+'</div></div></div><p class="review-text">'+r.text+'</p></div>';});document.getElementById('reviewList').innerHTML=html;}
+
+function addToCart(pid){let d=getData();let p=d.products.find(x=>x.id===pid);if(!p)return;let exist=cart.find(x=>x.id===pid);if(exist)exist.qty++;else cart.push({id:p.id,name:p.name,price:p.price,image:p.image,qty:1});saveCart();showToast('কার্টে যোগ হয়েছে! 🛒');}
+function removeFromCart(pid){cart=cart.filter(x=>x.id!==pid);saveCart();renderCart();}
+function updateQty(pid,delta){let item=cart.find(x=>x.id===pid);if(!item)return;item.qty+=delta;if(item.qty<1)removeFromCart(pid);else{saveCart();renderCart();}}
+
+function renderCart(){
+    let page=document.getElementById('cartPage');
+    if(!cart.length){page.innerHTML='<div class="empty-state"><i class="fas fa-shopping-cart"></i><h3>কার্ট খালি</h3><button class="btn btn-primary" onclick="showPage(\'home\')">শপিং করুন</button></div>';return;}
+    let total=cart.reduce((a,b)=>a+b.price*b.qty,0);
+    let html='<div class="pd-back" onclick="showPage(\'home\')"><i class="fas fa-arrow-left"></i> শপিং চালিয়ে যান</div>';
+    cart.forEach(item=>{html+='<div class="cart-item"><div class="cart-item-img"><img src="'+item.image+'"></div><div class="cart-item-info"><h4>'+item.name+'</h4><p class="price">৳'+item.price+'</p><div class="cart-item-qty"><button onclick="updateQty('+item.id+',-1)">-</button><span>'+item.qty+'</span><button onclick="updateQty('+item.id+',1)">+</button></div></div><div class="cart-item-remove" onclick="removeFromCart('+item.id+')"><i class="fas fa-trash"></i></div></div>';});
+    html+='<div class="cart-summary"><div class="row total"><span>মোট</span><span>৳'+total+'</span></div><button class="btn btn-primary btn-block" onclick="showPage(\'checkout\')">চেকআউট</button></div>';
+    page.innerHTML=html;
+}
+
+function showDetail(pid){let d=getData();let p=d.products.find(x=>x.id===pid);if(!p)return;detailQty=1;let html='<div class="pd-back" onclick="showPage(\'home\')"><i class="fas fa-arrow-left"></i> পিছনে</div><div class="pd-image"><img src="'+p.image+'"></div><div class="pd-info"><h2>'+p.name+'</h2><div class="pd-price"><span class="current">৳'+p.price+'</span>'+(p.oldPrice?'<span class="old">৳'+p.oldPrice+'</span>':'')+'</div><p class="pd-desc">'+p.desc+'</p><div class="pd-qty"><button class="qty-btn" onclick="changeDetailQty(-1)">-</button><span class="qty-val" id="detailQty">1</span><button class="qty-btn" onclick="changeDetailQty(1)">+</button></div><div class="pd-actions"><button class="btn btn-primary" onclick="addDetailToCart('+p.id+')">কার্টে যোগ</button><button class="btn btn-secondary" onclick="addDetailToCart('+p.id+');showPage(\'checkout\')">এখনই কিনুন</button></div></div>';document.getElementById('detailPage').innerHTML=html;document.querySelectorAll('#mainWebsite .page').forEach(p=>p.classList.remove('active'));document.getElementById('detailPage').classList.add('active');}
+function changeDetailQty(d){detailQty=Math.max(1,detailQty+d);let qtyEl=document.getElementById('detailQty');if(qtyEl)qtyEl.textContent=detailQty;}
+function addDetailToCart(pid){let d=getData();let p=d.products.find(x=>x.id===pid);if(!p)return;let e=cart.find(x=>x.id===pid);if(e)e.qty+=detailQty;else cart.push({id:p.id,name:p.name,price:p.price,image:p.image,qty:detailQty});saveCart();showToast('কার্টে যোগ হয়েছে!');detailQty=1;}
+
+function renderCheckout(){if(!cart.length){showPage('cart');return;}let d=getData();let total=cart.reduce((a,b)=>a+b.price*b.qty,0);let methods='';d.paymentMethods.forEach(m=>{if(m.enabled)methods+='<div class="payment-method" onclick="selectPayment(\''+m.id+'\')" id="pm-'+m.id+'"><img src="'+m.logo+'"><span>'+m.name+'</span></div>';});if(d.codEnabled)methods+='<div class="payment-method" onclick="selectPayment(\'cod\')" id="pm-cod"><i class="fas fa-truck"></i><span>COD</span></div>';let html='<div class="pd-back" onclick="showPage(\'cart\')"><i class="fas fa-arrow-left"></i> কার্টে ফিরুন</div><div class="checkout-form"><h3>📝 তথ্য দিন</h3><div class="form-row"><div class="form-group"><label>নাম</label><input type="text" id="coName"></div><div class="form-group"><label>ফোন</label><input type="tel" id="coPhone"></div></div><div class="form-group"><label>ঠিকানা/আইডি</label><input type="text" id="coAddress"></div><h3>💳 পেমেন্ট</h3><div class="payment-methods">'+methods+'</div><div class="payment-instruction" id="paymentInstruction"></div><div class="cart-summary"><div class="row total"><span>মোট</span><span>৳'+total+'</span></div></div><button class="btn btn-primary btn-block" onclick="placeOrder()">অর্ডার কনফার্ম</button></div>';document.getElementById('checkoutPage').innerHTML=html;selectedPayment='';}
+
+function selectPayment(method){selectedPayment=method;document.querySelectorAll('.payment-method').forEach(el=>el.classList.remove('selected'));let el=document.getElementById('pm-'+method);if(el)el.classList.add('selected');let d=getData();let pi=document.getElementById('paymentInstruction');if(method==='cod'){pi.style.display='block';pi.innerHTML='<div style="text-align:center"><i class="fas fa-truck"></i><h3>ক্যাশ অন ডেলিভারি</h3><p>পণ্য হাতে পেয়ে টাকা পরিশোধ করুন</p></div>';return;}let pm=d.paymentMethods.find(x=>x.id===method);if(!pm)return;let total=cart.reduce((a,b)=>a+b.price*b.qty,0);pi.innerHTML='<div><h3>'+pm.name+'</h3><p>Send Money to: <strong>'+pm.number+'</strong></p><p>Amount: <strong>'+total+' BDT</strong></p><input type="text" id="trxId" placeholder="Transaction ID"><button class="btn btn-primary" onclick="verifyTrx()">VERIFY</button></div>';pi.style.display='block';}
+function verifyTrx(){let trx=document.getElementById('trxId');if(trx&&trx.value)showToast('TrxID সেভ হয়েছে ✅');else showToast('TrxID দিন','error');}
+
+function placeOrder(){
+    let name=document.getElementById('coName').value.trim();
+    let phone=document.getElementById('coPhone').value.trim();
+    let address=document.getElementById('coAddress').value.trim();
+    if(!name||!phone||!address){showToast('সব তথ্য পূরণ করুন','error');return;}
+    if(!selectedPayment){showToast('পেমেন্ট মেথড সিলেক্ট করুন','error');return;}
+    let d=getData();
+    let total=cart.reduce((a,b)=>a+b.price*b.qty,0);
+    let trxEl=document.getElementById('trxId');
+    let order={id:'ORD'+Date.now(),customer:{name,phone,address,note:''},items:JSON.parse(JSON.stringify(cart)),total,payment:selectedPayment,trxId:trxEl?trxEl.value:'',status:'pending',date:new Date().toLocaleString()};
+    d.orders.push(order);
+    saveData(d);
+    if(d.telegram.botToken&&d.telegram.chatId){sendTelegramOrder(order,d);}
+    cart=[];saveCart();selectedPayment='';
+    showToast('🎉 অর্ডার সফল!');
+    showPage('profile');
+}
+
+function sendTelegramOrder(order,d){let items=order.items.map(i=>'• '+i.name+' x'+i.qty+' = ৳'+(i.price*i.qty)).join('\n');let msg='🛒 নতুন অর্ডার!\n\nID: '+order.id+'\nনাম: '+order.customer.name+'\nফোন: '+order.customer.phone+'\nমোট: ৳'+order.total+'\nপেমেন্ট: '+order.payment;fetch('https://api.telegram.org/bot'+d.telegram.botToken+'/sendMessage',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({chat_id:d.telegram.chatId,text:msg})}).catch(e=>console.log(e));}
+
+function renderProfile(){let phone=localStorage.getItem('customerPhone');let page=document.getElementById('profilePage');if(!phone){page.innerHTML='<div class="profile-welcome"><div class="profile-welcome-icon">👤</div><h2>স্বাগতম!</h2><input type="tel" id="profilePhone"><button class="btn btn-primary" onclick="loginProfile()">প্রোফাইল দেখুন</button></div>';return;}showCustomerProfile(phone);}
+function loginProfile(){let phone=document.getElementById('profilePhone').value.trim();if(!phone||phone.length<10){showToast('সঠিক ফোন দিন','error');return;}localStorage.setItem('customerPhone',phone);showCustomerProfile(phone);}
+function profileLogout(){localStorage.removeItem('customerPhone');renderProfile();showToast('লগআউট সফল','info');}
+function showCustomerProfile(phone){let d=getData();let orders=d.orders.filter(o=>o.customer.phone===phone);let totalSpent=orders.reduce((a,b)=>a+b.total,0);let cName=orders.length?orders[0].customer.name:'কাস্টমার';let html='<div class="pd-back" onclick="showPage(\'home\')"><i class="fas fa-arrow-left"></i> হোমে</div><div class="profile-header"><button class="profile-logout" onclick="profileLogout()">লগআউট</button><div class="profile-avatar">👤</div><h3>'+cName+'</h3><p>📞 '+phone+'</p><div class="profile-stats"><div class="profile-stat"><div class="num">'+orders.length+'</div><div class="label">অর্ডার</div></div><div class="profile-stat"><div class="num">৳'+totalSpent+'</div><div class="label">খরচ</div></div></div></div><div class="profile-orders"><h3>📦 আমার অর্ডার</h3>';if(!orders.length){html+='<p style="text-align:center">কোনো অর্ডার নেই</p>';}else{orders.forEach(o=>{let badge='badge-warning',text='⏳ পেন্ডিং';if(o.status==='confirmed'){badge='badge-success';text='✅ কনফার्म';}html+='<div class="profile-order-item"><div class="profile-order-header"><strong>'+o.id+'</strong><span class="badge '+badge+'">'+text+'</span></div>'+o.items.map(i=>'<p>• '+i.name+' x'+i.qty+' = ৳'+(i.price*i.qty)+'</p>').join('')+'<div><strong>মোট: ৳'+o.total+'</strong></div></div>';});}html+='</div>';document.getElementById('profilePage').innerHTML=html;}
+
+function toggleLiveChat(){document.getElementById('lcTooltip').classList.toggle('show');}
+
+// অ্যাডমিন ফাংশন
+function showAdminLogin(){document.getElementById('mainWebsite').style.display='none';document.getElementById('adminLoginPage').classList.add('active');document.getElementById('adminPanel').classList.remove('active');let d=getData();document.getElementById('loginLogo').src=d.siteSettings.logo;}
+function adminLogin(){let email=document.getElementById('adminEmail').value.trim();let pass=document.getElementById('adminPass').value;let d=getData();if(email===d.admin.email&&pass===d.admin.password){isAdmin=true;currentUser='Admin';showAdminPanel();showToast('স্বাগতম Admin!');return;}showToast('ভুল তথ্য','error');}
+function showAdminPanel(){document.getElementById('adminLoginPage').classList.remove('active');document.getElementById('mainWebsite').style.display='none';document.getElementById('adminPanel').classList.add('active');let d=getData();document.getElementById('sidebarLogo').src=d.siteSettings.logo;document.getElementById('adminWelcome').textContent='👋 '+currentUser;renderAdminDashboard();renderAdminProducts();renderAdminOrders();renderAdminCategories();renderAdminBanners();renderPaymentSettings();renderSiteSettings();renderTelegramSettings();renderWhatsAppSettings();renderSubAdmins();renderAdminReviews();}
+function adminLogout(){isAdmin=false;document.getElementById('adminPanel').classList.remove('active');document.getElementById('mainWebsite').style.display='block';showPage('home');showToast('লগআউট সফল');}
+function backToHome(){document.getElementById('adminLoginPage').classList.remove('active');document.getElementById('adminPanel').classList.remove('active');document.getElementById('mainWebsite').style.display='block';showPage('home');}
+function toggleSidebar(){document.getElementById('adminSidebar').classList.toggle('mobile-open');}
+function showAdminSection(sec){document.querySelectorAll('.admin-section').forEach(el=>el.classList.remove('active'));document.getElementById('sec-'+sec).classList.add('active');let titles={dashboard:'ড্যাশবোর্ড',products:'প্রোডাক্ট',categories:'ক্যাটাগরি',orders:'অর্ডার',banners:'ব্যানার',payment:'পেমেন্ট',settings:'সাইট সেটিংস',telegram:'টেলিগ্রাম',whatsapp:'WhatsApp',subadmins:'সাব-অ্যাডমিন',security:'সিকিউরিটি',reviews:'রিভিউ'};document.getElementById('adminPageTitle').textContent=titles[sec]||sec;if(window.innerWidth<768)document.getElementById('adminSidebar').classList.remove('mobile-open');}
+
+function renderAdminDashboard(){let d=getData();document.getElementById('totalProducts').textContent=d.products.length;document.getElementById('totalOrders').textContent=d.orders.length;document.getElementById('confirmedOrders').textContent=d.orders.filter(o=>o.status==='confirmed').length;document.getElementById('totalRevenue').textContent='৳'+d.orders.filter(o=>o.status==='confirmed').reduce((a,b)=>a+b.total,0);let recent=d.orders.slice(-3).reverse();let html='';recent.forEach(o=>{html+='<tr><td><strong>'+o.id+'</strong></td><td>'+o.customer.name+'</td><td>৳'+o.total+'</td><td>'+o.status+'</td></tr>';});if(!recent.length)html='<tr><td colspan="4">কোনো অর্ডার নেই</td></tr>';document.getElementById('recentOrdersTable').innerHTML=html;}
+
+function renderAdminProducts(){let d=getData();let html='';d.products.forEach(p=>{let cat=d.categories.find(c=>c.id===p.category);html+='<div class="admin-list-item"><img src="'+p.image+'"><div class="info"><strong>'+p.name+'</strong><p>'+(cat?cat.name:'N/A')+' | ৳'+p.price+'</p></div><div class="actions"><button class="btn btn-sm btn-warning" onclick="editProduct('+p.id+')"><i class="fas fa-edit"></i></button><button class="btn btn-sm btn-danger" onclick="deleteProduct('+p.id+')"><i class="fas fa-trash"></i></button></div></div>';});document.getElementById('adminProductList').innerHTML=html||'<p>কোনো প্রোডাক্ট নেই</p>';updateProductCategorySelect();}
+function updateProductCategorySelect(){let d=getData();let sel=document.getElementById('pCategory');if(sel)sel.innerHTML=d.categories.map(c=>'<option value="'+c.id+'">'+c.icon+' '+c.name+'</option>').join('');}
+function openProductForm(){editingProductId=null;document.getElementById('productFormCard').style.display='block';document.getElementById('productFormTitle').textContent='নতুন প্রোডাক্ট';['pName','pPrice','pOldPrice','pDesc','pImage'].forEach(id=>document.getElementById(id).value='');document.getElementById('pStock').value='100';document.getElementById('pBadge').value='';document.getElementById('pImgPreview').innerHTML='<span>📷 প্রিভিউ</span>';}
+function editProduct(pid){let d=getData();let p=d.products.find(x=>x.id===pid);if(!p)return;editingProductId=pid;document.getElementById('productFormCard').style.display='block';document.getElementById('productFormTitle').textContent='প্রোডাক্ট এডিট';document.getElementById('pName').value=p.name;document.getElementById('pCategory').value=p.category;document.getElementById('pPrice').value=p.price;document.getElementById('pOldPrice').value=p.oldPrice||'';document.getElementById('pDesc').value=p.desc;document.getElementById('pImage').value=p.image;document.getElementById('pBadge').value=p.badge||'';document.getElementById('pStock').value=p.stock;previewImg('pImage','pImgPreview');}
+function closeProductForm(){document.getElementById('productFormCard').style.display='none';}
+function saveProduct(){let d=getData();let p={name:document.getElementById('pName').value.trim(),category:parseInt(document.getElementById('pCategory').value),price:parseInt(document.getElementById('pPrice').value)||0,oldPrice:parseInt(document.getElementById('pOldPrice').value)||0,desc:document.getElementById('pDesc').value,image:document.getElementById('pImage').value,badge:document.getElementById('pBadge').value,stock:parseInt(document.getElementById('pStock').value)||0,rating:4.5,reviews:0};if(!p.name||!p.price){showToast('নাম ও মূল্য দিন','error');return;}if(editingProductId){let idx=d.products.findIndex(x=>x.id===editingProductId);if(idx>-1){p.id=editingProductId;p.rating=d.products[idx].rating;p.reviews=d.products[idx].reviews;d.products[idx]=p;}showToast('আপডেট হয়েছে ✅');}else{p.id=Date.now();d.products.push(p);showToast('যোগ হয়েছে ✅');}saveData(d);closeProductForm();renderAdminProducts();renderAdminDashboard();}
+function deleteProduct(pid){if(!confirm('মুছে ফেলবেন?'))return;let d=getData();d.products=d.products.filter(x=>x.id!==pid);saveData(d);renderAdminProducts();renderAdminDashboard();showToast('মুছে ফেলা হয়েছে');}
+function renderAdminOrders(filter='all'){let d=getData();let orders=filter==='all'?d.orders:d.orders.filter(o=>o.status===filter);let html='';orders.slice().reverse().forEach(o=>{html+='<tr><td><strong>'+o.id+'</strong></td><td>'+o.customer.name+'</td><td>'+o.customer.phone+'</td><td>৳'+o.total+'</td><td>'+o.payment+'</td><td>'+o.status+'</td><td><select onchange="updateOrderStatus(\''+o.id+'\',this.value)"><option value="pending" '+(o.status==='pending'?'selected':'')+'>পেন্ডিং</option><option value="confirmed" '+(o.status==='confirmed'?'selected':'')+'>কনফার্ম</option><option value="cancelled" '+(o.status==='cancelled'?'selected':'')+'>বাতিল</option></select></td></tr>';});if(!orders.length)html='<tr><td colspan="7">কোনো অর্ডার নেই</td></tr>';document.getElementById('ordersTableBody').innerHTML=html;}
+function filterOrders(f){renderAdminOrders(f);}
+function updateOrderStatus(oid,status){let d=getData();let o=d.orders.find(x=>x.id===oid);if(o){o.status=status;saveData(d);renderAdminDashboard();renderAdminOrders();showToast('স্ট্যাটাস আপডেট ✅');}}
+function renderAdminCategories(){let d=getData();let html='';d.categories.forEach(c=>{html+='<div class="admin-list-item"><span style="font-size:30px;width:55px;text-align:center">'+c.icon+'</span><div class="info"><strong>'+c.name+'</strong></div><div class="actions"><button class="btn btn-sm btn-danger" onclick="deleteCategory('+c.id+')"><i class="fas fa-trash"></i></button></div></div>';});document.getElementById('adminCategoryList').innerHTML=html;}
+function openCategoryForm(){document.getElementById('categoryFormCard').style.display='block';document.getElementById('catName').value='';document.getElementById('catIcon').value='';}
+function saveCategory(){let d=getData();let name=document.getElementById('catName').value.trim();let icon=document.getElementById('catIcon').value||'📦';if(!name){showToast('নাম দিন','error');return;}d.categories.push({id:Date.now(),name,icon});saveData(d);document.getElementById('categoryFormCard').style.display='none';renderAdminCategories();updateProductCategorySelect();showToast('যোগ হয়েছে ✅');}
+function deleteCategory(cid){if(!confirm('মুছে ফেলবেন?'))return;let d=getData();d.categories=d.categories.filter(x=>x.id!==cid);saveData(d);renderAdminCategories();showToast('মুছে ফেলা হয়েছে');}
+function renderAdminBanners(){let d=getData();let html='';d.banners.forEach(b=>{html+='<div class="admin-list-item"><img src="'+b.image+'" style="width:80px;height:45px"><div class="info"><strong>'+b.title+'</strong><p>'+b.subtitle+'</p></div><div class="actions"><button class="btn btn-sm btn-danger" onclick="deleteBanner('+b.id+')"><i class="fas fa-trash"></i></button></div></div>';});document.getElementById('adminBannerList').innerHTML=html;}
+function openBannerForm(){document.getElementById('bannerFormCard').style.display='block';['bannerTitle','bannerSubtitle','bannerImage','bannerLink'].forEach(id=>document.getElementById(id).value='');}
+function saveBanner(){let d=getData();let b={id:Date.now(),title:document.getElementById('bannerTitle').value.trim(),subtitle:document.getElementById('bannerSubtitle').value,image:document.getElementById('bannerImage').value,link:document.getElementById('bannerLink').value||'#'};if(!b.title){showToast('শিরোনাম দিন','error');return;}d.banners.push(b);saveData(d);document.getElementById('bannerFormCard').style.display='none';renderAdminBanners();showToast('যোগ হয়েছে ✅');}
+function deleteBanner(bid){if(!confirm('মুছে ফেলবেন?'))return;let d=getData();d.banners=d.banners.filter(x=>x.id!==bid);saveData(d);renderAdminBanners();showToast('মুছে ফেলা হয়েছে');}
+function renderPaymentSettings(){let d=getData();let html='';d.paymentMethods.forEach(pm=>{html+='<div class="pm-edit-card"><div class="pm-edit-header"><div class="pm-edit-name"><img src="'+pm.logo+'"><strong>'+pm.name+'</strong></div><label class="switch"><input type="checkbox" '+(pm.enabled?'checked':'')+' onchange="togglePayment(\''+pm.id+'\')"><span class="slider"></span></label></div><div class="form-group"><label>নম্বর</label><input type="text" id="pmnum-'+pm.id+'" value="'+pm.number+'"></div><button class="btn btn-primary btn-sm" onclick="savePaymentMethod(\''+pm.id+'\')">সেভ</button></div>';});document.getElementById('paymentMethodsList').innerHTML=html;document.getElementById('codToggle').checked=d.codEnabled;}
+function savePaymentMethod(id){let d=getData();let pm=d.paymentMethods.find(x=>x.id===id);if(pm){pm.number=document.getElementById('pmnum-'+id).value.trim();saveData(d);showToast(pm.name+' সেভ হয়েছে ✅');}}
+function togglePayment(id){let d=getData();let pm=d.paymentMethods.find(x=>x.id===id);if(pm){pm.enabled=!pm.enabled;saveData(d);showToast(pm.name+' '+(pm.enabled?'চালু':'বন্ধ'));}}
+function toggleCOD(){let d=getData();d.codEnabled=document.getElementById('codToggle').checked;saveData(d);showToast('COD '+(d.codEnabled?'চালু':'বন্ধ'));}
+function renderSiteSettings(){let d=getData();document.getElementById('setSiteName').value=d.siteSettings.name;document.getElementById('setLogo').value=d.siteSettings.logo;document.getElementById('logoPreview').src=d.siteSettings.logo;document.getElementById('setContact').value=d.siteSettings.contact;document.getElementById('setEmail').value=d.siteSettings.email;document.getElementById('setFacebook').value=d.siteSettings.facebook||'';document.getElementById('setYoutube').value=d.siteSettings.youtube||'';}
+function saveSiteSettings(){let d=getData();d.siteSettings.name=document.getElementById('setSiteName').value;d.siteSettings.logo=document.getElementById('setLogo').value;d.siteSettings.contact=document.getElementById('setContact').value;d.siteSettings.email=document.getElementById('setEmail').value;d.siteSettings.facebook=document.getElementById('setFacebook').value;d.siteSettings.youtube=document.getElementById('setYoutube').value;saveData(d);showToast('সেভ হয়েছে ✅');}
+function renderTelegramSettings(){let d=getData();document.getElementById('tgBotToken').value=d.telegram.botToken||'';document.getElementById('tgChatId').value=d.telegram.chatId||'';document.getElementById('tgUsername').value=d.telegram.username||'';}
+function saveTelegramSettings(){let d=getData();d.telegram={botToken:document.getElementById('tgBotToken').value.trim(),chatId:document.getElementById('tgChatId').value.trim(),username:document.getElementById('tgUsername').value.trim(),notify:true};saveData(d);showToast('সেভ হয়েছে ✅');}
+function testTelegram(){let d=getData();if(!d.telegram.botToken||!d.telegram.chatId){showToast('Token ও Chat ID দিন','error');return;}fetch('https://api.telegram.org/bot'+d.telegram.botToken+'/sendMessage',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({chat_id:d.telegram.chatId,text:'✅ টেস্ট মেসেজ!'})}).then(r=>r.json()).then(r=>{if(r.ok)showToast('পাঠানো হয়েছে ✅');else showToast('এরর','error');}).catch(e=>showToast('এরর','error'));}
+function renderWhatsAppSettings(){let d=getData();document.getElementById('waNumber').value=d.whatsapp?d.whatsapp.number:'';document.getElementById('waMessage').value=d.whatsapp?d.whatsapp.message:'';}
+function saveWhatsAppSettings(){let d=getData();d.whatsapp={number:document.getElementById('waNumber').value.trim(),message:document.getElementById('waMessage').value};saveData(d);showToast('সেভ হয়েছে ✅');}
+function renderSubAdmins(){let d=getData();let html='';d.subAdmins.forEach((sa,i)=>{html+='<div class="admin-list-item"><div style="width:45px;height:45px;border-radius:50%;background:var(--info);color:#fff;display:flex;align-items:center;justify-content:center">'+sa.name.charAt(0)+'</div><div class="info"><strong>'+sa.name+'</strong><p>'+sa.email+'</p></div><div class="actions"><button class="btn btn-sm btn-danger" onclick="removeSubAdmin('+i+')"><i class="fas fa-trash"></i></button></div></div>';});document.getElementById('subAdminList').innerHTML=html||'<p>কোনো সাব-অ্যাডমিন নেই</p>';}
+function openSubAdminForm(){let d=getData();if(d.subAdmins.length>=3){showToast('সর্বোচ্চ ৩ জন','error');return;}document.getElementById('subAdminFormCard').style.display='block';['saName','saEmail','saPass'].forEach(id=>document.getElementById(id).value='');}
+function saveSubAdmin(){let d=getData();let sa={name:document.getElementById('saName').value.trim(),email:document.getElementById('saEmail').value.trim(),password:document.getElementById('saPass').value};if(!sa.name||!sa.email||!sa.password){showToast('সব তথ্য দিন','error');return;}d.subAdmins.push(sa);saveData(d);document.getElementById('subAdminFormCard').style.display='none';renderSubAdmins();showToast('যোগ হয়েছে ✅');}
+function removeSubAdmin(i){if(!confirm('মুছে ফেলবেন?'))return;let d=getData();d.subAdmins.splice(i,1);saveData(d);renderSubAdmins();showToast('মুছে ফেলা হয়েছে');}
+function renderAdminReviews(){let d=getData();let html='';d.customerReviews.forEach((r,i)=>{html+='<div class="admin-list-item"><div class="info"><strong>'+r.name+'</strong> '+'⭐'.repeat(r.rating)+'<p>'+r.text+'</p></div><div class="actions"><button class="btn btn-sm btn-danger" onclick="deleteReview('+i+')"><i class="fas fa-trash"></i></button></div></div>';});document.getElementById('adminReviewList').innerHTML=html;}
+function deleteReview(i){let d=getData();d.customerReviews.splice(i,1);saveData(d);renderAdminReviews();showToast('মুছে ফেলা হয়েছে');}
+function forgotPassword(){let d=getData();let code=Math.floor(100000+Math.random()*900000);if(d.telegram.botToken&&d.telegram.chatId){fetch('https://api.telegram.org/bot'+d.telegram.botToken+'/sendMessage',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({chat_id:d.telegram.chatId,text:'🔐 রিসেট কোড: '+code})}).catch(e=>console.log(e));}let userCode=prompt('টেলিগ্রামে পাঠানো কোড দিন (ডেমো: '+code+'):');if(userCode==code){let newPass=prompt('নতুন পাসওয়ার্ড:');if(newPass){d.admin.password=newPass;saveData(d);showToast('পাসওয়ার্ড পরিবর্তন হয়েছে ✅');}}else if(userCode){showToast('ভুল কোড','error');}}
+function changePassword(){let d=getData();let current=document.getElementById('currentPass').value;let newP=document.getElementById('newPass').value;let confirmP=document.getElementById('confirmPass').value;if(current!==d.admin.password){showToast('বর্তমান পাসওয়ার্ড ভুল','error');return;}if(newP!==confirmP){showToast('পাসওয়ার্ড মিলছে না','error');return;}let code=Math.floor(100000+Math.random()*900000);if(d.telegram.botToken&&d.telegram.chatId){fetch('https://api.telegram.org/bot'+d.telegram.botToken+'/sendMessage',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({chat_id:d.telegram.chatId,text:'🔐 পাসওয়ার্ড পরিবর্তন কোড: '+code})}).catch(e=>console.log(e));}let userCode=prompt('টেলিগ্রামে কোড দিন (ডেমো: '+code+'):');if(userCode!=code){showToast('ভুল কোড','error');return;}d.admin.password=newP;saveData(d);showToast('পরিবর্তন হয়েছে ✅');}
+
+function init(){updateCartCount();renderHome();if(window.location.hash==='#admin')showAdminLogin();}
+window.addEventListener('hashchange',()=>{if(window.location.hash==='#admin')showAdminLogin();});
 init();
 </script>
 </body>
