@@ -1,0 +1,263 @@
+{
+  "siteSettings": {
+    "name": "ASHIK DIGITAL MARKETING",
+    "logo": "https://i.postimg.cc/R0RBDYjt/file-00000000edf07208a1089ceb51c77687.png",
+    "contact": "01933489724",
+    "email": "freefireemyid01@gmail.com",
+    "facebook": "https://facebook.com",
+    "youtube": "https://youtube.com"
+  },
+  "admin": {
+    "email": "freefireemyid01@gmail.com",
+    "password": "demo@#1122",
+    "recoveryEmail": ""
+  },
+  "subAdmins": [],
+  "categories": [
+    {
+      "id": 1,
+      "name": "AI PRO ACCOUNT",
+      "icon": "🤖"
+    },
+    {
+      "id": 2,
+      "name": "AI DESIGN",
+      "icon": "🎨"
+    },
+    {
+      "id": 3,
+      "name": "YOUTUBE SERVICE",
+      "icon": "📺"
+    },
+    {
+      "id": 4,
+      "name": "FACEBOOK SERVICE",
+      "icon": "📘"
+    },
+    {
+      "id": 5,
+      "name": "DIGITAL PRODUCT",
+      "icon": "💾"
+    }
+  ],
+  "products": [
+    {
+      "id": 1,
+      "name": "CAPCUT PRO ACCOUNT",
+      "category": 1,
+      "price": 299,
+      "oldPrice": 599,
+      "image": "https://i.postimg.cc/vBmNpvKW/file-00000000c4fc720bb61ee2116f785287.png",
+      "desc": "CAPCUT PRO অ্যাকাউন্ট - ১ মাসের ভ্যালিডিটি। সব প্রিমিয়াম ফিচার আনলকড। 4K এক্সপোর্ট, প্রিমিয়াম ইফেক্ট সহ।",
+      "badge": "hot",
+      "stock": 50,
+      "rating": 4.8,
+      "reviews": 152
+    },
+    {
+      "id": 2,
+      "name": "CANVA PRO ACCOUNT",
+      "category": 1,
+      "price": 399,
+      "oldPrice": 799,
+      "image": "https://i.postimg.cc/vZ8Y0LSQ/file-00000000b3407207b8e8d88f71c8f6f4-(1).png",
+      "desc": "CANVA PRO - ১ বছরের ভ্যালিডিটি। ১০০M+ প্রিমিয়াম টেমপ্লেট। Background Remover, Magic Resize আনলকড।",
+      "badge": "sale",
+      "stock": 30,
+      "rating": 4.9,
+      "reviews": 285
+    },
+    {
+      "id": 3,
+      "name": "ADOBE PRO ACCOUNT",
+      "category": 1,
+      "price": 1499,
+      "oldPrice": 2999,
+      "image": "https://images.unsplash.com/photo-1572044162444-ad60f128bdea?w=400",
+      "desc": "ADOBE CREATIVE CLOUD - Photoshop, Illustrator, Premiere Pro সহ ২০+ অ্যাপ। ১০০GB ক্লাউড।",
+      "badge": "new",
+      "stock": 20,
+      "rating": 4.7,
+      "reviews": 98
+    },
+    {
+      "id": 4,
+      "name": "AI LOGO DESIGN",
+      "category": 2,
+      "price": 499,
+      "oldPrice": 1000,
+      "image": "https://images.unsplash.com/photo-1626785774573-4b799315345d?w=400",
+      "desc": "প্রফেশনাল লোগো ডিজাইন AI টুল দিয়ে। আনলিমিটেড রিভিশন।",
+      "badge": "",
+      "stock": 100,
+      "rating": 4.6,
+      "reviews": 67
+    },
+    {
+      "id": 5,
+      "name": "AI BANNER DESIGN",
+      "category": 2,
+      "price": 299,
+      "oldPrice": 600,
+      "image": "https://images.unsplash.com/photo-1611162617474-5b21e879e113?w=400",
+      "desc": "সোশ্যাল মিডিয়ার জন্য আকর্ষণীয় ব্যানার ডিজাইন।",
+      "badge": "hot",
+      "stock": 100,
+      "rating": 4.7,
+      "reviews": 89
+    },
+    {
+      "id": 6,
+      "name": "YOUTUBE 1K SUBSCRIBERS",
+      "category": 3,
+      "price": 1500,
+      "oldPrice": 2500,
+      "image": "https://images.unsplash.com/photo-1611162616475-46b635cb6868?w=400",
+      "desc": "YouTube চ্যানেলে ১০০০ রিয়েল সাবস্ক্রাইবার। নন-ড্রপ গ্যারান্টি।",
+      "badge": "sale",
+      "stock": 50,
+      "rating": 4.5,
+      "reviews": 124
+    },
+    {
+      "id": 7,
+      "name": "YOUTUBE 4000 HOURS WATCH TIME",
+      "category": 3,
+      "price": 3500,
+      "oldPrice": 5000,
+      "image": "https://images.unsplash.com/photo-1611162618071-b39a2ec055fb?w=400",
+      "desc": "৪০০০ ঘন্টা ওয়াচ টাইম। মোনেটাইজেশনের জন্য পারফেক্ট।",
+      "badge": "hot",
+      "stock": 30,
+      "rating": 4.8,
+      "reviews": 76
+    },
+    {
+      "id": 8,
+      "name": "FACEBOOK PAGE LIKES 1K",
+      "category": 4,
+      "price": 500,
+      "oldPrice": 1000,
+      "image": "https://images.unsplash.com/photo-1611605698335-8b1569810432?w=400",
+      "desc": "Facebook পেজে ১০০০+ রিয়েল লাইক। নন-ড্রপ।",
+      "badge": "",
+      "stock": 100,
+      "rating": 4.4,
+      "reviews": 203
+    },
+    {
+      "id": 9,
+      "name": "FACEBOOK MONETIZATION SETUP",
+      "category": 4,
+      "price": 2000,
+      "oldPrice": 3500,
+      "image": "https://images.unsplash.com/photo-1432888622747-4eb9a8efeb07?w=400",
+      "desc": "Facebook পেজ মোনেটাইজেশন সেটআপ। In-Stream Ads, Stars এনাবল।",
+      "badge": "new",
+      "stock": 25,
+      "rating": 4.7,
+      "reviews": 54
+    },
+    {
+      "id": 10,
+      "name": "PREMIUM SOFTWARE BUNDLE",
+      "category": 5,
+      "price": 799,
+      "oldPrice": 1500,
+      "image": "https://images.unsplash.com/photo-1551434678-e076c223a692?w=400",
+      "desc": "১০০+ প্রিমিয়াম সফটওয়্যার + লাইফটাইম লাইসেন্স।",
+      "badge": "hot",
+      "stock": 60,
+      "rating": 4.9,
+      "reviews": 178
+    }
+  ],
+  "banners": [
+    {
+      "id": 1,
+      "title": "🔥 মেগা অফার!",
+      "subtitle": "সকল প্রিমিয়াম অ্যাকাউন্টে ৫০% পর্যন্ত ছাড়",
+      "image": "https://i.postimg.cc/R0RBDYjt/file-00000000edf07208a1089ceb51c77687.png",
+      "link": "https://ashikdigitalbd.github.io/ashikdigitalbd/"
+    },
+    {
+      "id": 2,
+      "title": "🤖 AI Pro অ্যাকাউন্ট",
+      "subtitle": "CapCut, Canva, Adobe Pro - সর্বনিম্ন দামে",
+      "image": "https://i.postimg.cc/R0RBDYjt/file-00000000edf07208a1089ceb51c77687.png",
+      "link": "#"
+    },
+    {
+      "id": 3,
+      "title": "📺 YouTube সার্ভিস",
+      "subtitle": "মোনেটাইজেশন সেটআপ + সাবস্ক্রাইবার",
+      "image": "https://images.unsplash.com/photo-1611162616305-c69b3fa7fbe0?w=1200",
+      "link": "#"
+    }
+  ],
+  "paymentMethods": [
+    {
+      "id": "bkash",
+      "name": "বিকাশ",
+      "number": "01933489724",
+      "enabled": true,
+      "logo": "https://images.weserv.nl/?url=upload.wikimedia.org/wikipedia/bn/a/a8/%E0%A6%AC%E0%A6%BF%E0%A6%95%E0%A6%BE%E0%A6%B6%E0%A7%87%E0%A6%B0_%E0%A6%B2%E0%A7%8B%E0%A6%97%E0%A7%8B.svg&output=png&w=200"
+    },
+    {
+      "id": "nagad",
+      "name": "নগদ",
+      "number": "01933489724",
+      "enabled": true,
+      "logo": "https://images.weserv.nl/?url=upload.wikimedia.org/wikipedia/bn/9/97/%E0%A6%A8%E0%A6%97%E0%A6%A6%E0%A7%87%E0%A6%B0_%E0%A6%B2%E0%A7%8B%E0%A6%97%E0%A7%8B.svg&output=png&w=200"
+    },
+    {
+      "id": "rocket",
+      "name": "রকেট",
+      "number": "01933489724",
+      "enabled": true,
+      "logo": "https://images.weserv.nl/?url=upload.wikimedia.org/wikipedia/commons/4/45/Rocket_mobile_banking_logo.svg&output=png&w=200"
+    },
+    {
+      "id": "upay",
+      "name": "উপায়",
+      "number": "01933489724",
+      "enabled": true,
+      "logo": "https://images.weserv.nl/?url=upload.wikimedia.org/wikipedia/commons/d/d5/Upay_logo.svg&output=png&w=200"
+    }
+  ],
+  "codEnabled": false,
+  "orders": [],
+  "customerReviews": [
+    {
+      "id": 1,
+      "name": "রাকিব হাসান",
+      "rating": 5,
+      "text": "CapCut Pro অ্যাকাউন্ট পেয়েছি ৫ মিনিটের মধ্যে। দারুণ সার্ভিস! 😊",
+      "date": "2025-01-15"
+    },
+    {
+      "id": 2,
+      "name": "সাব্বির আহমেদ",
+      "rating": 5,
+      "text": "Canva Pro নিয়েছি, একদম পারফেক্টভাবে কাজ করছে। ধন্যবাদ ASHIK ভাই!",
+      "date": "2025-01-12"
+    },
+    {
+      "id": 3,
+      "name": "নাফিজ ইসলাম",
+      "rating": 5,
+      "text": "YouTube মোনেটাইজেশন সেটআপ করিয়েছি, অসাধারণ সাপোর্ট পেয়েছি। 💯",
+      "date": "2025-01-10"
+    }
+  ],
+  "telegram": {
+    "botToken": "8732766562:AAEYvZLBWdXf2BmF2zwtddISCy1GDYxMU5g",
+    "chatId": "7154659074",
+    "username": "https://t.me/AshikDigitalMarketing",
+    "notify": true
+  },
+  "whatsapp": {
+    "number": "8801933489724",
+    "message": "হ্যালো ASHIK DIGITAL MARKETING! আমি আপনার সার্ভিস সম্পর্কে জানতে চাই।"
+  }
+}
